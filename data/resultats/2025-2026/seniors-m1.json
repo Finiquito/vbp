@@ -1,0 +1,703 @@
+{
+ "competition": "Nationale 2 Masculine · poule C",
+ "saison": "2025-2026",
+ "source": "FFVolley, export CSV",
+ "matchs": [
+  {
+   "j": 1,
+   "date": "2025-09-28",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Conflans-Andrésy-Jouy VB 2",
+   "nous": 3,
+   "eux": 0,
+   "sets": [
+    [
+     25,
+     0
+    ],
+    [
+     25,
+     0
+    ],
+    [
+     25,
+     0
+    ]
+   ],
+   "salle": "Gymnase Pierre Bérégovoy",
+   "forfait": true
+  },
+  {
+   "j": 2,
+   "date": "2025-10-05",
+   "heure": "15:00",
+   "home": true,
+   "adv": "Sporting Club Paris",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     22,
+     25
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     18,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 3,
+   "date": "2025-10-19",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Paris Amicale Camou",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     18,
+     25
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     19,
+     25
+    ]
+   ],
+   "salle": "Dupleix",
+   "forfait": false
+  },
+  {
+   "j": 4,
+   "date": "2025-10-26",
+   "heure": "14:00",
+   "home": true,
+   "adv": "Lescar Pyrénées VB",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     25,
+     20
+    ],
+    [
+     11,
+     25
+    ],
+    [
+     13,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 5,
+   "date": "2025-11-02",
+   "heure": "14:00",
+   "home": false,
+   "adv": "CNM Charenton",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     24,
+     26
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     18,
+     25
+    ]
+   ],
+   "salle": "Tony Parker",
+   "forfait": false
+  },
+  {
+   "j": 6,
+   "date": "2025-11-16",
+   "heure": "15:00",
+   "home": true,
+   "adv": "JSA Bordeaux",
+   "nous": 2,
+   "eux": 3,
+   "sets": [
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     20
+    ],
+    [
+     25,
+     15
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     12,
+     15
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 7,
+   "date": "2025-11-23",
+   "heure": "13:00",
+   "home": false,
+   "adv": "TOAC-TUC Volley 3",
+   "nous": 3,
+   "eux": 0,
+   "sets": [
+    [
+     26,
+     24
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     25,
+     22
+    ]
+   ],
+   "salle": "Andre Brouat",
+   "forfait": false
+  },
+  {
+   "j": 8,
+   "date": "2025-11-30",
+   "heure": "15:00",
+   "home": true,
+   "adv": "US Talence",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     18,
+     25
+    ],
+    [
+     17,
+     25
+    ],
+    [
+     13,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 9,
+   "date": "2025-12-07",
+   "exempt": true
+  },
+  {
+   "j": 10,
+   "date": "2025-12-21",
+   "heure": "14:00",
+   "home": false,
+   "adv": "US Villejuif",
+   "nous": 3,
+   "eux": 1,
+   "sets": [
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     23
+    ],
+    [
+     26,
+     24
+    ],
+    [
+     25,
+     19
+    ]
+   ],
+   "salle": "Gymnase Daniel Féry",
+   "forfait": false
+  },
+  {
+   "j": 11,
+   "date": "2026-01-11",
+   "heure": "15:00",
+   "home": true,
+   "adv": "SA Mérignac",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     13,
+     25
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     17,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 12,
+   "date": "2026-01-25",
+   "heure": "15:00",
+   "home": true,
+   "adv": "Conflans-Andrésy-Jouy VB 2",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     25,
+     9
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     18,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 13,
+   "date": "2026-02-01",
+   "heure": "15:00",
+   "home": false,
+   "adv": "Sporting Club Paris",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     19,
+     25
+    ],
+    [
+     14,
+     25
+    ],
+    [
+     23,
+     25
+    ]
+   ],
+   "salle": "Gymnase Valeyre",
+   "forfait": false
+  },
+  {
+   "j": 14,
+   "date": "2026-02-15",
+   "heure": "15:00",
+   "home": true,
+   "adv": "Paris Amicale Camou",
+   "nous": 2,
+   "eux": 3,
+   "sets": [
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     28,
+     26
+    ],
+    [
+     10,
+     15
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 15,
+   "date": "2026-02-22",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Lescar Pyrénées VB",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     18,
+     25
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     20,
+     25
+    ]
+   ],
+   "salle": "Paul Fort",
+   "forfait": false
+  },
+  {
+   "j": 16,
+   "date": "2026-03-01",
+   "heure": "15:00",
+   "home": true,
+   "adv": "CNM Charenton",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     18,
+     25
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     17,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 17,
+   "date": "2026-03-08",
+   "heure": "16:00",
+   "home": false,
+   "adv": "JSA Bordeaux",
+   "nous": 3,
+   "eux": 1,
+   "sets": [
+    [
+     25,
+     20
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     27,
+     25
+    ]
+   ],
+   "salle": "Salle Maitre Jean",
+   "forfait": false
+  },
+  {
+   "j": 18,
+   "date": "2026-03-22",
+   "heure": "16:00",
+   "home": true,
+   "adv": "TOAC-TUC Volley 3",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     20,
+     25
+    ],
+    [
+     15,
+     25
+    ],
+    [
+     18,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 19,
+   "date": "2026-03-29",
+   "heure": "16:00",
+   "home": false,
+   "adv": "US Talence",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     23,
+     25
+    ]
+   ],
+   "salle": "Léo Lagrange",
+   "forfait": false
+  },
+  {
+   "j": 20,
+   "date": "2026-04-05",
+   "exempt": true
+  },
+  {
+   "j": 21,
+   "date": "2026-04-19",
+   "heure": "15:00",
+   "home": true,
+   "adv": "US Villejuif",
+   "nous": 3,
+   "eux": 2,
+   "sets": [
+    [
+     25,
+     27
+    ],
+    [
+     25,
+     18
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     16
+    ],
+    [
+     15,
+     13
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 22,
+   "date": "2026-04-26",
+   "heure": "16:00",
+   "home": false,
+   "adv": "SA Mérignac",
+   "nous": 3,
+   "eux": 2,
+   "sets": [
+    [
+     25,
+     17
+    ],
+    [
+     25,
+     27
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     25,
+     19
+    ],
+    [
+     15,
+     8
+    ]
+   ],
+   "salle": "Gymnase Alice Milliat",
+   "forfait": false
+  }
+ ],
+ "classement": [
+  {
+   "rang": 1,
+   "club": "CNM Charenton",
+   "J": 20,
+   "G": 17,
+   "P": 3,
+   "pts": 49,
+   "sp": 52,
+   "sc": 16,
+   "pp": 1614,
+   "pc": 1366
+  },
+  {
+   "rang": 2,
+   "club": "US Talence",
+   "J": 20,
+   "G": 15,
+   "P": 5,
+   "pts": 46,
+   "sp": 51,
+   "sc": 21,
+   "pp": 1659,
+   "pc": 1458
+  },
+  {
+   "rang": 3,
+   "club": "TOAC-TUC Volley 3",
+   "J": 20,
+   "G": 15,
+   "P": 5,
+   "pts": 40,
+   "sp": 50,
+   "sc": 34,
+   "pp": 1898,
+   "pc": 1819
+  },
+  {
+   "rang": 4,
+   "club": "Sporting Club Paris",
+   "J": 20,
+   "G": 13,
+   "P": 7,
+   "pts": 39,
+   "sp": 47,
+   "sc": 30,
+   "pp": 1726,
+   "pc": 1636
+  },
+  {
+   "rang": 5,
+   "club": "SA Mérignac",
+   "J": 20,
+   "G": 11,
+   "P": 9,
+   "pts": 37,
+   "sp": 43,
+   "sc": 32,
+   "pp": 1670,
+   "pc": 1588
+  },
+  {
+   "rang": 6,
+   "club": "Paris Amicale Camou",
+   "J": 20,
+   "G": 11,
+   "P": 9,
+   "pts": 32,
+   "sp": 41,
+   "sc": 37,
+   "pp": 1752,
+   "pc": 1659
+  },
+  {
+   "rang": 7,
+   "club": "Lescar Pyrénées VB",
+   "J": 20,
+   "G": 8,
+   "P": 12,
+   "pts": 26,
+   "sp": 35,
+   "sc": 44,
+   "pp": 1697,
+   "pc": 1749
+  },
+  {
+   "rang": 8,
+   "club": "JSA Bordeaux",
+   "J": 20,
+   "G": 7,
+   "P": 13,
+   "pts": 21,
+   "sp": 29,
+   "sc": 47,
+   "pp": 1607,
+   "pc": 1751
+  },
+  {
+   "rang": 9,
+   "club": "VBP Niort",
+   "J": 20,
+   "G": 6,
+   "P": 14,
+   "pts": 18,
+   "sp": 25,
+   "sc": 48,
+   "pp": 1512,
+   "pc": 1604
+  },
+  {
+   "rang": 10,
+   "club": "Conflans-Andrésy-Jouy VB 2",
+   "J": 20,
+   "G": 6,
+   "P": 14,
+   "pts": 17,
+   "sp": 25,
+   "sc": 46,
+   "pp": 1453,
+   "pc": 1655
+  },
+  {
+   "rang": 11,
+   "club": "US Villejuif",
+   "J": 20,
+   "G": 1,
+   "P": 19,
+   "pts": 5,
+   "sp": 14,
+   "sc": 57,
+   "pp": 1408,
+   "pc": 1711
+  }
+ ]
+}

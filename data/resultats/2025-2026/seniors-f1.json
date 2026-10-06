@@ -1,0 +1,711 @@
+{
+ "competition": "Nationale 2 Féminine · poule D",
+ "saison": "2025-2026",
+ "source": "FFVolley, export CSV",
+ "matchs": [
+  {
+   "j": 1,
+   "date": "2025-09-28",
+   "heure": "11:00",
+   "home": true,
+   "adv": "JSA Bordeaux",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     19,
+     25
+    ],
+    [
+     27,
+     29
+    ],
+    [
+     15,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 2,
+   "date": "2025-10-05",
+   "heure": "16:00",
+   "home": false,
+   "adv": "Rennes Étudiants Club 2",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     10,
+     25
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     19,
+     25
+    ]
+   ],
+   "salle": "Courtemanche",
+   "forfait": false
+  },
+  {
+   "j": 3,
+   "date": "2025-10-19",
+   "heure": "14:00",
+   "home": true,
+   "adv": "Quimper Volley 29",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     14,
+     25
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     18,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 4,
+   "date": "2025-10-26",
+   "heure": "15:00",
+   "home": false,
+   "adv": "VBC Le Haillan",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     12,
+     25
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     22,
+     25
+    ]
+   ],
+   "salle": "Bel Air",
+   "forfait": false
+  },
+  {
+   "j": 5,
+   "date": "2025-11-02",
+   "heure": "14:00",
+   "home": true,
+   "adv": "ES Carpiquet",
+   "nous": 2,
+   "eux": 3,
+   "sets": [
+    [
+     15,
+     25
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     25,
+     16
+    ],
+    [
+     10,
+     15
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 6,
+   "date": "2025-11-16",
+   "heure": "14:00",
+   "home": false,
+   "adv": "SA Mérignac",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     17,
+     25
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     17
+    ],
+    [
+     11,
+     25
+    ]
+   ],
+   "salle": "Gymnase Alice Milliat",
+   "forfait": false
+  },
+  {
+   "j": 7,
+   "date": "2025-11-23",
+   "heure": "14:00",
+   "home": true,
+   "adv": "Neptunes de Nantes 2",
+   "nous": 3,
+   "eux": 2,
+   "sets": [
+    [
+     21,
+     25
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     18
+    ],
+    [
+     25,
+     23
+    ],
+    [
+     15,
+     9
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 8,
+   "date": "2025-11-30",
+   "heure": "14:00",
+   "home": false,
+   "adv": "AS Vélizy",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     11,
+     25
+    ]
+   ],
+   "salle": "Centre Sportif Robert Wagner",
+   "forfait": false
+  },
+  {
+   "j": 9,
+   "date": "2025-12-07",
+   "heure": "15:00",
+   "home": true,
+   "adv": "Sporting Club de l'Ouest",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     23
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     16,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 10,
+   "date": "2025-12-21",
+   "exempt": true
+  },
+  {
+   "j": 11,
+   "date": "2026-01-11",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Plessis-Robinson VB",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     25,
+     15
+    ],
+    [
+     17,
+     25
+    ],
+    [
+     15,
+     25
+    ]
+   ],
+   "salle": "Esp. Omnisports",
+   "forfait": false
+  },
+  {
+   "j": 12,
+   "date": "2026-01-25",
+   "heure": "14:00",
+   "home": false,
+   "adv": "JSA Bordeaux",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     22
+    ],
+    [
+     12,
+     25
+    ],
+    [
+     15,
+     25
+    ]
+   ],
+   "salle": "Salle Maitre Jean",
+   "forfait": false
+  },
+  {
+   "j": 13,
+   "date": "2026-02-01",
+   "heure": "14:00",
+   "home": true,
+   "adv": "Rennes Étudiants Club 2",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     19,
+     25
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 14,
+   "date": "2026-02-15",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Quimper Volley 29",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     20,
+     25
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     20,
+     25
+    ]
+   ],
+   "salle": "Gymnase College La Tourelle",
+   "forfait": false
+  },
+  {
+   "j": 15,
+   "date": "2026-02-22",
+   "heure": "14:00",
+   "home": true,
+   "adv": "VBC Le Haillan",
+   "nous": 3,
+   "eux": 2,
+   "sets": [
+    [
+     25,
+     18
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     15,
+     13
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 16,
+   "date": "2026-03-01",
+   "heure": "16:00",
+   "home": false,
+   "adv": "ES Carpiquet",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     9,
+     25
+    ],
+    [
+     12,
+     25
+    ]
+   ],
+   "salle": "Salle Legrandois",
+   "forfait": false
+  },
+  {
+   "j": 17,
+   "date": "2026-03-08",
+   "heure": "14:00",
+   "home": true,
+   "adv": "SA Mérignac",
+   "nous": 3,
+   "eux": 0,
+   "sets": [
+    [
+     25,
+     21
+    ],
+    [
+     25,
+     17
+    ],
+    [
+     25,
+     18
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 18,
+   "date": "2026-03-22",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Neptunes de Nantes 2",
+   "nous": 0,
+   "eux": 3,
+   "sets": [
+    [
+     20,
+     25
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     22,
+     25
+    ]
+   ],
+   "salle": "Jean Jahan 2",
+   "forfait": false
+  },
+  {
+   "j": 19,
+   "date": "2026-03-29",
+   "heure": "14:00",
+   "home": true,
+   "adv": "AS Vélizy",
+   "nous": 1,
+   "eux": 3,
+   "sets": [
+    [
+     25,
+     21
+    ],
+    [
+     14,
+     25
+    ],
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     27
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  },
+  {
+   "j": 20,
+   "date": "2026-04-05",
+   "heure": "14:00",
+   "home": false,
+   "adv": "Sporting Club de l'Ouest",
+   "nous": 3,
+   "eux": 1,
+   "sets": [
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     19
+    ],
+    [
+     25,
+     19
+    ],
+    [
+     25,
+     19
+    ]
+   ],
+   "salle": "Centre Sportif De La Roseraie",
+   "forfait": false
+  },
+  {
+   "j": 21,
+   "date": "2026-04-19",
+   "exempt": true
+  },
+  {
+   "j": 22,
+   "date": "2026-04-26",
+   "heure": "14:00",
+   "home": true,
+   "adv": "Plessis-Robinson VB",
+   "nous": 2,
+   "eux": 3,
+   "sets": [
+    [
+     23,
+     25
+    ],
+    [
+     25,
+     18
+    ],
+    [
+     25,
+     21
+    ],
+    [
+     23,
+     25
+    ],
+    [
+     10,
+     15
+    ]
+   ],
+   "salle": "Henri Barbusse",
+   "forfait": false
+  }
+ ],
+ "classement": [
+  {
+   "rang": 1,
+   "club": "JSA Bordeaux",
+   "J": 20,
+   "G": 17,
+   "P": 3,
+   "pts": 48,
+   "sp": 54,
+   "sc": 24,
+   "pp": 1820,
+   "pc": 1543
+  },
+  {
+   "rang": 2,
+   "club": "Sporting Club de l'Ouest",
+   "J": 20,
+   "G": 15,
+   "P": 5,
+   "pts": 42,
+   "sp": 53,
+   "sc": 34,
+   "pp": 1887,
+   "pc": 1746
+  },
+  {
+   "rang": 3,
+   "club": "Neptunes de Nantes 2",
+   "J": 20,
+   "G": 12,
+   "P": 8,
+   "pts": 37,
+   "sp": 46,
+   "sc": 33,
+   "pp": 1733,
+   "pc": 1629
+  },
+  {
+   "rang": 4,
+   "club": "SA Mérignac",
+   "J": 20,
+   "G": 11,
+   "P": 9,
+   "pts": 33,
+   "sp": 38,
+   "sc": 36,
+   "pp": 1593,
+   "pc": 1505
+  },
+  {
+   "rang": 5,
+   "club": "ES Carpiquet",
+   "J": 20,
+   "G": 11,
+   "P": 9,
+   "pts": 32,
+   "sp": 44,
+   "sc": 37,
+   "pp": 1805,
+   "pc": 1702
+  },
+  {
+   "rang": 6,
+   "club": "Rennes Étudiants Club 2",
+   "J": 20,
+   "G": 10,
+   "P": 10,
+   "pts": 32,
+   "sp": 40,
+   "sc": 38,
+   "pp": 1685,
+   "pc": 1698
+  },
+  {
+   "rang": 7,
+   "club": "Quimper Volley 29",
+   "J": 20,
+   "G": 10,
+   "P": 10,
+   "pts": 31,
+   "sp": 39,
+   "sc": 39,
+   "pp": 1607,
+   "pc": 1654
+  },
+  {
+   "rang": 8,
+   "club": "Plessis-Robinson VB",
+   "J": 20,
+   "G": 9,
+   "P": 11,
+   "pts": 26,
+   "sp": 38,
+   "sc": 42,
+   "pp": 1695,
+   "pc": 1744
+  },
+  {
+   "rang": 9,
+   "club": "AS Vélizy",
+   "J": 20,
+   "G": 8,
+   "P": 12,
+   "pts": 25,
+   "sp": 35,
+   "sc": 46,
+   "pp": 1703,
+   "pc": 1775
+  },
+  {
+   "rang": 10,
+   "club": "VBC Le Haillan",
+   "J": 20,
+   "G": 3,
+   "P": 17,
+   "pts": 12,
+   "sp": 26,
+   "sc": 53,
+   "pp": 1504,
+   "pc": 1807
+  },
+  {
+   "rang": 11,
+   "club": "VBP Niort",
+   "J": 20,
+   "G": 4,
+   "P": 16,
+   "pts": 12,
+   "sp": 22,
+   "sc": 53,
+   "pp": 1492,
+   "pc": 1721
+  }
+ ]
+}
