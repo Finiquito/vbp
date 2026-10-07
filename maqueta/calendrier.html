@@ -139,15 +139,15 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 </template>
 </div>
 
-<aside style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px">
+<aside style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px">
 <div style="padding: 24px; border: 1px solid #d3e1ee; border-radius: 20px">
 <h2 style="margin: 0 0 4px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px">Classement final</h2>
 <p style="margin: 0 0 14px; font-size: 13px; line-height: 18px; color: #4f5f77">{{competition}}</p>
 <table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 20px">
-<thead><tr style="color: #4f5f77; font-size: 12px; text-align: left"><th scope="col" style="padding: 6px 4px; font-weight: 600">#</th><th scope="col" style="padding: 6px 4px; font-weight: 600">Équipe</th><th scope="col" style="padding: 6px 4px; font-weight: 600; text-align: right">V–D</th><th scope="col" style="padding: 6px 4px; font-weight: 600; text-align: right">Pts</th></tr></thead>
+<thead><tr style="color: #4f5f77; font-size: 12px; text-align: left"><th scope="col" style="padding: 6px 4px; font-weight: 600">#</th><th scope="col" style="padding: 6px 4px; font-weight: 600">Équipe</th><th scope="col" style="padding: 6px 4px 6px 12px; font-weight: 600; text-align: right; white-space: nowrap">V–D</th><th scope="col" style="padding: 6px 4px 6px 12px; font-weight: 600; text-align: right; white-space: nowrap">Pts</th></tr></thead>
 <tbody>
 <template data-sc="for" list="{{classement}}" as="c" hint-placeholder-count="11">
-<tr style="{{c.style}}"><td class="score" style="padding: 8px 4px; font-size: 13px">{{c.rang}}</td><td style="padding: 8px 4px; font-weight: {{c.poids}}">{{c.club}}</td><td class="score" style="padding: 8px 4px; text-align: right; font-size: 13px; font-weight: 800">{{c.vd}}</td><td class="score" style="padding: 8px 4px; text-align: right; font-size: 13px">{{c.pts}}</td></tr>
+<tr style="{{c.style}}"><td class="score" style="padding: 8px 4px; font-size: 13px">{{c.rang}}</td><td style="padding: 8px 4px; font-weight: {{c.poids}}">{{c.club}}</td><td class="score" style="padding: 8px 4px 8px 12px; text-align: right; font-size: 13px; font-weight: 800; white-space: nowrap; width: 1%">{{c.vd}}</td><td class="score" style="padding: 8px 4px 8px 12px; text-align: right; font-size: 13px; white-space: nowrap; width: 1%">{{c.pts}}</td></tr>
 </template>
 </tbody>
 </table>
