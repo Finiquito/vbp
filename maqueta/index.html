@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VBP Niort · Maquette de la page d’accueil</title>
+<title>VBP Niort · Accueil</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="img/logo-vbpn.png">
 
@@ -84,55 +84,55 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <header style="position: relative; z-index: 60; background: #ffffff; border-bottom: 1px solid #d3e1ee">
 <div class="wrap" style="padding-top: 12px; padding-bottom: 12px; display: flex; flex-wrap: nowrap; gap: 12px 28px; align-items: center">
 <span style="display: flex; align-items: center; gap: 16px; flex: 0 0 auto">
-<a href="#" aria-label="VBP Niort, accueil" style="display: flex"><img src="img/logo-vbpn.png" alt="VBP Niort, accueil" style="width: 72px; height: 72px; display: block"></a>
-<sc-if value="{{apercu}}" hint-placeholder-val="{{true}}">
+<a href="index.html" aria-label="VBP Niort, accueil" style="display: flex"><img src="img/logo-vbpn.png" alt="VBP Niort, accueil" style="width: 72px; height: 72px; display: block"></a>
+<template data-sc="if" value="{{apercu}}" hint-placeholder-val="{{true}}">
 <a href="#" class="only-d h-ffv" title="Club affilié à la Fédération française de volley" style="display: flex; align-items: center; gap: 16px; text-decoration: none"><span aria-hidden="true" style="width: 1px; height: 44px; background: #d3e1ee"></span><img src="img/ffvolley.svg" alt="Club affilié à la FFVolley" style="width: 46px; height: auto; display: block"></a>
-</sc-if>
+</template>
 </span>
-<sc-if value="{{apercu}}" hint-placeholder-val="{{true}}">
+<template data-sc="if" value="{{apercu}}" hint-placeholder-val="{{true}}">
 <nav class="only-d nav-d" aria-label="Menu principal" style="display: flex; flex-wrap: wrap; gap: 4px 26px; flex: 1 1 auto; min-width: 0; align-self: stretch; font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; font-size: 16px">
-<sc-for list="{{mmNav}}" as="n" hint-placeholder-count="6">
+<template data-sc="for" list="{{mmNav}}" as="n" hint-placeholder-count="6">
 <button type="button" class="mm-btn" aria-expanded="{{n.expanded}}" aria-controls="mega-menu" onClick="{{n.pick}}" style="{{n.style}}">{{n.label}}<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="{{n.chev}}"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg></button>
-</sc-for>
+</template>
 </nav>
-</sc-if>
+</template>
 <div class="only-d h-cta" style="display: flex; gap: 20px; align-items: center; margin-left: auto">
 <a href="#" class="h-boutique" style="font-size: 15px; color: #4f5f77; text-decoration: none; font-weight: 600">Boutique</a>
-<a href="#" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px">Se licencier</a>
+<a href="licences.html" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px">Se licencier</a>
 </div>
 <button type="button" class="only-m nav-m" aria-expanded="{{menuOpen}}" aria-controls="menu-mobile" onClick="{{toggleMenu}}" style="margin-left: auto; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; border: 1px solid #5a82aa; border-radius: 8px; background: #ffffff; color: #0b1b33; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer">
 <span style="display: flex; flex-direction: column; gap: 4px"><span style="width: 18px; height: 2px; background: #0b1b33"></span><span style="width: 18px; height: 2px; background: #0b1b33"></span><span style="width: 18px; height: 2px; background: #0b1b33"></span></span>{{menuLabel}}</button>
 </div>
-<sc-if value="{{menuOpen}}" hint-placeholder-val="{{false}}">
+<template data-sc="if" value="{{menuOpen}}" hint-placeholder-val="{{false}}">
 <nav id="menu-mobile" aria-label="Menu principal" style="border-top: 1px solid #d3e1ee">
 <div class="wrap" style="padding-top: 4px; padding-bottom: 24px; display: flex; flex-direction: column; font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif">
-<a href="#" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Le club</a>
-<a href="#" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Équipes</a>
-<a href="#" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Calendrier &amp; résultats</a>
+<a href="histoire.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Le club</a>
+<a href="equipe.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Équipes</a>
+<a href="calendrier.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Calendrier &amp; résultats</a>
 <a href="#formation" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Formation</a>
 <a href="#ages" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Volley pour tous</a>
 <a href="#actus" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Actus</a>
 <a href="#" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Partenaires</a>
 <a href="#" style="display: flex; align-items: center; min-height: 52px; color: #4f5f77; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; text-decoration: none">Boutique</a>
-<a href="#" class="btn btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; min-height: 52px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-family: 'Open Sans', sans-serif; font-weight: 700">Se licencier</a>
+<a href="licences.html" class="btn btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; min-height: 52px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-family: 'Open Sans', sans-serif; font-weight: 700">Se licencier</a>
 </div>
 </nav>
-</sc-if>
-<sc-if value="{{mmOuvert}}" hint-placeholder-val="{{true}}">
+</template>
+<template data-sc="if" value="{{mmOuvert}}" hint-placeholder-val="{{true}}">
 <div class="only-d mm-voile" aria-hidden="true" onClick="{{mmFermer}}" style="position: absolute; left: 0; right: 0; top: 100%; height: 1400px; background: rgba(11,27,51,.55)"></div>
 <div id="mega-menu" class="only-d mm-panel" style="position: absolute; left: 0; right: 0; top: 100%; background: #ffffff; border-bottom: 1px solid #d3e1ee">
 <div class="wrap" style="padding-top: 36px; padding-bottom: 32px">
 <div role="list" class="mm-grid" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px">
-<sc-for list="{{mmCols}}" as="c" hint-placeholder-count="6">
+<template data-sc="for" list="{{mmCols}}" as="c" hint-placeholder-count="6">
 <div role="listitem" class="{{c.cls}}">
 <div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid {{c.trait}}; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: {{c.couleur}}"><span class="los" style="width: 16px; height: 9px; background: {{c.couleur}}"></span>{{c.label}}</div>
 <ul style="list-style: none; margin: 0; padding: 0">
-<sc-for list="{{c.liens}}" as="l" hint-placeholder-count="5">
-<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="{{l.dot}}"></span>{{l.t}}</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">{{l.d}}</span></a></li>
-</sc-for>
+<template data-sc="for" list="{{c.liens}}" as="l" hint-placeholder-count="5">
+<li><a href="{{l.href}}" onClick="{{mmFermer}}" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="{{l.dot}}"></span>{{l.t}}</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">{{l.d}}</span></a></li>
+</template>
 </ul>
 </div>
-</sc-for>
+</template>
 </div>
 </div>
 <div class="dark" style="position: relative; background: #0b1b33; color: #ffffff; overflow: hidden">
@@ -142,19 +142,19 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <span style="font-size: 14px; line-height: 20px; color: #c9d6e6">Complexe Henri Barbusse · Gymnase de Sainte-Pezenne</span>
 <span style="margin-left: auto; display: flex; gap: 12px; align-items: center">
 <a href="#" style="color: #7cc4ec; font-weight: 600; font-size: 15px; text-decoration: none">Nous contacter</a>
-<a href="#" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px">Essayer gratuitement</a>
+<a href="licences.html" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px">Essayer gratuitement</a>
 </span>
 </div>
 </div>
 </div>
-</sc-if>
+</template>
 </header>
 
 <!-- PORTADA -->
 <section class="dark" aria-roledescription="carrousel" aria-label="À la une" style="position: relative; background: #0b1b33; color: #ffffff; overflow: hidden">
 <img src="img/patron-triangulos.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.12">
 <div class="hero-stage" style="position: relative; display: grid; min-height: 600px">
-<sc-for list="{{slides}}" as="sl" hint-placeholder-count="5">
+<template data-sc="for" list="{{slides}}" as="sl" hint-placeholder-count="5">
 <div class="slide" aria-hidden="{{sl.hidden}}" style="{{sl.layer}}">
 <div class="hero-photo" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%); overflow: hidden; background: #1b4180">
 <img src="{{sl.photo}}" alt="{{sl.alt}}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{sl.pos}}; display: block">
@@ -165,18 +165,18 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <h1 class="hero-h1" style="{{sl.h1}}">{{sl.titre}}</h1>
 <p class="hero-p" style="margin: 0; font-size: 20px; line-height: 30px; color: #c9d6e6; max-width: 520px">{{sl.texte}}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
-<a href="#" class="btn" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; background: #ffffff; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700">{{sl.cta}}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+<a href="{{sl.href}}" class="btn" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; background: #ffffff; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700">{{sl.cta}}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
 </div>
 </div>
 </div>
 </div>
-</sc-for>
+</template>
 </div>
 
 <div style="position: relative; background: rgba(11,27,51,.92); border-top: 1px solid rgba(124,196,236,.18)">
 <div class="wrap" style="padding-top: 16px; padding-bottom: 20px">
 <div role="tablist" aria-label="Diapositives" class="only-d" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 20px">
-<sc-for list="{{thumbs}}" as="t" hint-placeholder-count="5">
+<template data-sc="for" list="{{thumbs}}" as="t" hint-placeholder-count="5">
 <button type="button" role="tab" class="thumb" aria-selected="{{t.selected}}" onClick="{{t.pick}}" onMouseEnter="{{t.enter}}" onMouseLeave="{{t.leave}}" style="{{t.style}}">
 <span style="display: block; height: 3px; background: rgba(255,255,255,.18); border-radius: 2px; overflow: hidden"><span style="{{t.bar}}"></span></span>
 <span style="display: flex; gap: 12px; align-items: center; padding-top: 12px">
@@ -187,12 +187,12 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 </span>
 </span>
 </button>
-</sc-for>
+</template>
 </div>
 <div role="tablist" aria-label="Diapositives" class="only-m" style="align-items: center; gap: 4px">
-<sc-for list="{{thumbs}}" as="t" hint-placeholder-count="5">
+<template data-sc="for" list="{{thumbs}}" as="t" hint-placeholder-count="5">
 <button type="button" role="tab" aria-selected="{{t.selected}}" aria-label="{{t.label}}" onClick="{{t.pick}}" style="{{t.dot}}"><span style="{{t.dotFill}}"></span></button>
-</sc-for>
+</template>
 <span style="margin-left: 10px; font-size: 13px; font-weight: 600; color: #c9d6e6">{{slideNum}} / 5 · {{slideLabel}}</span>
 </div>
 </div>
@@ -216,20 +216,20 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; margin: 28px 0 24px">
 <div role="tablist" aria-label="État des matchs" style="display: flex; gap: 4px; padding: 4px; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 10px; overflow-x: auto">
-<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<template data-sc="for" list="{{tabs}}" as="t" hint-placeholder-count="3">
 <button type="button" role="tab" aria-selected="{{t.selected}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
-</sc-for>
+</template>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{cats}}" as="c" hint-placeholder-count="4">
+<template data-sc="for" list="{{cats}}" as="c" hint-placeholder-count="4">
 <button type="button" aria-pressed="{{c.selected}}" onClick="{{c.pick}}" style="{{c.style}}"><span style="{{c.dot}}"></span>{{c.label}}</button>
-</sc-for>
+</template>
 </div>
 </div>
 
-<sc-if value="{{isVenir}}" hint-placeholder-val="{{true}}">
+<template data-sc="if" value="{{isVenir}}" hint-placeholder-val="{{true}}">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr)); gap: 16px">
-<sc-for list="{{venir}}" as="m" hint-placeholder-count="4">
+<template data-sc="for" list="{{venir}}" as="m" hint-placeholder-count="4">
 <article class="card" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; padding: 20px; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 20px">
 <div style="{{m.dateStyle}}">
 <span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase">{{m.jour}}</span>
@@ -252,13 +252,13 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 14.5s5-4.6 5-8.5a5 5 0 0 0-10 0c0 3.9 5 8.5 5 8.5z"></path><circle cx="8" cy="6" r="1.8"></circle></svg>{{m.lieu}}</span>
 </div>
 </div>
-<a href="#" class="btn {{m.btnClass}}" style="{{m.btnStyle}}">{{m.btn}}</a>
+<a href="calendrier.html" class="btn {{m.btnClass}}" style="{{m.btnStyle}}">{{m.btn}}</a>
 </article>
-</sc-for>
+</template>
 </div>
-</sc-if>
+</template>
 
-<sc-if value="{{isDirect}}" hint-placeholder-val="{{false}}">
+<template data-sc="if" value="{{isDirect}}" hint-placeholder-val="{{false}}">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr)); gap: 16px">
 <article class="dark" style="position: relative; overflow: hidden; padding: 28px; background: #0b1b33; color: #ffffff; border-radius: 20px; display: flex; flex-direction: column; gap: 20px">
 <img src="img/hd-ataque-femenino.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .14">
@@ -273,7 +273,7 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700"><img src="img/logo-vbpn.png" alt="" style="width: 72px; height: 72px">VBP Niort</div>
 </div>
 <div class="score" style="position: relative; text-align: center; font-size: 14px; color: #c9d6e6; font-weight: 800">21-25 · 25-22 · 19-25 · 15-18</div>
-<a href="#" class="btn btn-ghost-dark" style="position: relative; align-self: center; display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #ffffff; border-radius: 8px; color: #ffffff; text-decoration: none; font-weight: 700">Suivre le match</a>
+<a href="calendrier.html" class="btn btn-ghost-dark" style="position: relative; align-self: center; display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #ffffff; border-radius: 8px; color: #ffffff; text-decoration: none; font-weight: 700">Suivre le match</a>
 </article>
 <div style="display: flex; flex-direction: column; gap: 12px">
 <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">Aussi ce week-end</div>
@@ -282,11 +282,11 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <div style="display: flex; gap: 12px; align-items: center; padding: 14px 16px; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 14px; flex-wrap: wrap"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; background: #eaf3fa; color: #0b1b33; border: 1px solid #d3e1ee; border-radius: 9999px; font-size: 11px; font-weight: 700; letter-spacing: .08em">DEMAIN</span><span style="font-weight: 600">Jeunes · U18 M — VBP Niort vs VC Quissac</span><span style="margin-left: auto; color: #4f5f77">11h00</span></div>
 </div>
 </div>
-</sc-if>
+</template>
 
-<sc-if value="{{isRes}}" hint-placeholder-val="{{false}}">
+<template data-sc="if" value="{{isRes}}" hint-placeholder-val="{{false}}">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr)); gap: 16px">
-<sc-for list="{{resultats}}" as="r" hint-placeholder-count="3">
+<template data-sc="for" list="{{resultats}}" as="r" hint-placeholder-count="3">
 <article class="card" style="display: flex; flex-wrap: wrap; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 20px; overflow: hidden">
 <div style="flex: 1 1 180px; min-height: 200px; overflow: hidden; background: #1b4180"><img src="{{r.photo}}" alt="{{r.alt}}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{r.pos}}; display: block"></div>
 <div style="flex: 3 1 320px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
@@ -299,20 +299,20 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <div style="display: grid; grid-template-columns: minmax(0, 1fr) 44px repeat(5, 34px); gap: 6px; align-items: center; font-size: 15px">
 <span></span><span></span><span style="text-align: center; color: #4f5f77; font-size: 12px">1</span><span style="text-align: center; color: #4f5f77; font-size: 12px">2</span><span style="text-align: center; color: #4f5f77; font-size: 12px">3</span><span style="text-align: center; color: #4f5f77; font-size: 12px">4</span><span style="text-align: center; color: #4f5f77; font-size: 12px">5</span>
 <span style="display: flex; align-items: center; gap: 8px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700"><img src="{{r.aLogo}}" alt="" style="flex: 0 0 28px; width: 28px; height: 28px; object-fit: contain; border-radius: 9999px"><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{r.a}}</span></span><span class="score" style="{{r.atStyle}}">{{r.at}}</span>
-<sc-for list="{{r.as}}" as="s" hint-placeholder-count="5"><span class="score" style="{{s.style}}">{{s.v}}</span></sc-for>
+<template data-sc="for" list="{{r.as}}" as="s" hint-placeholder-count="5"><span class="score" style="{{s.style}}">{{s.v}}</span></template>
 <span style="display: flex; align-items: center; gap: 8px; min-width: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700"><img src="{{r.bLogo}}" alt="" style="flex: 0 0 28px; width: 28px; height: 28px; object-fit: contain; border-radius: 9999px"><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{r.b}}</span></span><span class="score" style="{{r.btStyle}}">{{r.bt}}</span>
-<sc-for list="{{r.bs}}" as="s" hint-placeholder-count="5"><span class="score" style="{{s.style}}">{{s.v}}</span></sc-for>
+<template data-sc="for" list="{{r.bs}}" as="s" hint-placeholder-count="5"><span class="score" style="{{s.style}}">{{s.v}}</span></template>
 </div>
-<a href="#" style="font-size: 15px; font-weight: 600">Le résumé du match</a>
+<a href="article.html" style="font-size: 15px; font-weight: 600">Le résumé du match</a>
 </div>
 </article>
-</sc-for>
+</template>
 </div>
-</sc-if>
+</template>
 
 <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center">
-<a href="#" class="btn btn-ghost" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #1c5fa6; border-radius: 8px; color: #1c5fa6; text-decoration: none; font-weight: 700; background: transparent">Voir le calendrier complet</a>
-<a href="#" style="font-weight: 600">Classements FFVolley</a>
+<a href="calendrier.html" class="btn btn-ghost" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #1c5fa6; border-radius: 8px; color: #1c5fa6; text-decoration: none; font-weight: 700; background: transparent">Voir le calendrier complet</a>
+<a href="calendrier.html" style="font-weight: 600">Classements FFVolley</a>
 </div>
 </div>
 </section>
@@ -332,17 +332,17 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <div style="padding: 20px; border: 1px solid #d3e1ee; border-radius: 20px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">Se former</span><a href="#formation" style="font-size: 15px; font-weight: 600">Notre filière</a></div>
 <div role="tablist" aria-label="Âge, se former" style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{agesFormer}}" as="a" hint-placeholder-count="4">
+<template data-sc="for" list="{{agesFormer}}" as="a" hint-placeholder-count="4">
 <button type="button" role="tab" aria-selected="{{a.selected}}" onClick="{{a.pick}}" style="{{a.style}}">{{a.label}}</button>
-</sc-for>
+</template>
 </div>
 </div>
 <div style="padding: 20px; border: 1px solid #d3e1ee; border-radius: 20px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">Pratiquer</span><a href="#pourtous" style="font-size: 15px; font-weight: 600">Le volley autrement</a></div>
 <div role="tablist" aria-label="Âge, pratiquer" style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{agesPratiquer}}" as="a" hint-placeholder-count="2">
+<template data-sc="for" list="{{agesPratiquer}}" as="a" hint-placeholder-count="2">
 <button type="button" role="tab" aria-selected="{{a.selected}}" onClick="{{a.pick}}" style="{{a.style}}">{{a.label}}</button>
-</sc-for>
+</template>
 </div>
 </div>
 </div>
@@ -354,12 +354,12 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.1">{{age.titre}}</h3>
 <p style="margin: 0; max-width: 60ch; color: #0b1b33">{{age.texte}}</p>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<sc-for list="{{age.creneaux}}" as="c" hint-placeholder-count="2">
+<template data-sc="for" list="{{age.creneaux}}" as="c" hint-placeholder-count="2">
 <div style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 12px 16px; background: #eaf3fa; border-radius: 10px; font-size: 15px; line-height: 22px"><span style="font-weight: 700">{{c.quand}}</span><span style="color: #4f5f77">{{c.ou}}</span></div>
-</sc-for>
+</template>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: auto; align-items: center">
-<a href="#" class="btn btn-ghost" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #1c5fa6; border-radius: 8px; color: #1c5fa6; text-decoration: none; font-weight: 700">Voir tous les créneaux</a>
+<a href="licences.html" class="btn btn-ghost" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #1c5fa6; border-radius: 8px; color: #1c5fa6; text-decoration: none; font-weight: 700">Voir tous les créneaux</a>
 <a href="#" style="font-weight: 600">Nous contacter</a>
 </div>
 </div>
@@ -416,7 +416,7 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #7cc4ec">Ils ont grandi au club</span>
 <blockquote style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 32px">Anatole Chaboissant, formé à Sainte-Pezenne, champion d'Europe U17 avec l'équipe de France en 2019.</blockquote>
 <figcaption style="color: #c9d6e6; font-size: 15px">[2 ou 3 autres parcours de joueuses et joueurs formés au club]</figcaption>
-<a href="#" style="margin-top: auto; color: #7cc4ec; font-weight: 600">Notre projet de formation</a>
+<a href="histoire.html" style="margin-top: auto; color: #7cc4ec; font-weight: 600">Notre projet de formation</a>
 </figure>
 </div>
 </div>
@@ -429,12 +429,12 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <h2 class="big-h2" style="margin: 6px 0 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05">Le volley autrement</h2>
 <p style="margin: 0 0 32px; font-size: 20px; line-height: 30px; color: #4f5f77; max-width: 640px">Sans compétition, sans niveau requis : pour bouger, partager et se faire du bien.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px">
-<sc-for list="{{autrement}}" as="p" hint-placeholder-count="4">
+<template data-sc="for" list="{{autrement}}" as="p" hint-placeholder-count="4">
 <a href="#" class="card" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 20px; overflow: hidden; text-decoration: none; color: #0b1b33">
 <span style="display: block; height: 180px; background: #1b4180; overflow: hidden"><img src="{{p.photo}}" alt="{{p.alt}}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{p.pos}}; display: block"></span>
 <span style="padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; line-height: 26px">{{p.titre}}</span><span style="font-size: 15px; line-height: 22px; color: #4f5f77">{{p.texte}}</span></span>
 </a>
-</sc-for>
+</template>
 </div>
 </div>
 </section>
@@ -444,31 +444,31 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <div class="wrap">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 32px">
 <h2 class="big-h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05">Actualités</h2>
-<a href="#" style="font-weight: 600">Toutes les actus</a>
+<a href="actualites.html" style="font-weight: 600">Toutes les actus</a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 28px">
-<sc-for list="{{actus}}" as="n" hint-placeholder-count="4">
-<a href="#" class="card" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #0b1b33; border: 0">
+<template data-sc="for" list="{{actus}}" as="n" hint-placeholder-count="4">
+<a href="article.html" class="card" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #0b1b33; border: 0">
 <span style="display: block; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; background: #1b4180"><img src="{{n.photo}}" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span>
 <span style="display: flex; gap: 8px; align-items: center; font-size: 13px; line-height: 18px"><span style="{{n.chipStyle}}">{{n.branche}}</span><span style="color: #4f5f77">{{n.date}}</span></span>
 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 21px; line-height: 27px">{{n.titre}}</span>
 </a>
-</sc-for>
+</template>
 </div>
 </div>
 </section>
 
 <!-- PARTENAIRES -->
-<section style="border-top: 1px solid #d3e1ee; padding: 64px 0">
+<section id="partenaires" style="border-top: 1px solid #d3e1ee; padding: 64px 0">
 <div class="wrap">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 28px">
 <div><h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; line-height: 32px">Ils nous soutiennent</h2><p style="margin: 6px 0 0; color: #4f5f77">Plus de 30 entreprises du territoire niortais.</p></div>
 <a href="#" class="btn btn-ghost" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #1c5fa6; border-radius: 8px; color: #1c5fa6; text-decoration: none; font-weight: 700">Devenir partenaire</a>
 </div>
 <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 12px">
-<sc-for list="{{logos}}" as="l" hint-placeholder-count="16">
+<template data-sc="for" list="{{logos}}" as="l" hint-placeholder-count="16">
 <li><a href="#" class="sponsor" aria-label="{{l.nom}}" style="height: 96px; padding: 14px; box-sizing: border-box; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 12px; display: flex; align-items: center; justify-content: center"><img src="{{l.src}}" alt="{{l.nom}}" style="max-width: 100%; max-height: 64px; object-fit: contain; display: block"></a></li>
-</sc-for>
+</template>
 </ul>
 </div>
 </section>
@@ -497,27 +497,23 @@ a{color:#1c5fa6}a:hover{color:#1b4180}
 <a href="#" style="color: #ffffff">Instagram · vbp.n</a>
 <a href="#" style="color: #ffffff">Facebook</a>
 <a href="#" style="color: #ffffff">YouTube</a>
-<a href="#" style="color: #ffffff">Newsletter Pexiniouzes</a>
+<a href="actualites.html" style="color: #ffffff">Newsletter Pexiniouzes</a>
 </div>
 </div>
 <div class="wrap" style="position: relative; margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #c9d6e6">
-<span>© VBP Niort</span><a href="#" style="color: #c9d6e6">Mentions légales</a><a href="#" style="color: #c9d6e6">Charte du club</a><a href="#" style="color: #c9d6e6">Cookies</a>
+<span>© VBP Niort</span><a href="#" style="color: #c9d6e6">Mentions légales</a><a href="benevoles.html#chartes" style="color: #c9d6e6">Charte du club</a><a href="#" style="color: #c9d6e6">Cookies</a>
 </div>
 </footer>
 
 </div>
 </template>
+
 <div id="app"></div>
 <div id="toast" role="status" aria-live="polite">Cette page sera ajoutée dans une prochaine version de la maquette.</div>
 <div class="maq-tag" aria-hidden="true">Maquette · contenus provisoires</div>
 <script>(function(global,factory){typeof exports==="object"&&typeof module!=="undefined"?module.exports=factory():typeof define==="function"&&define.amd?define(factory):(global=global||self,global.morphdom=factory())})(this,function(){"use strict";var DOCUMENT_FRAGMENT_NODE=11;function morphAttrs(fromNode,toNode){var toNodeAttrs=toNode.attributes;var attr;var attrName;var attrNamespaceURI;var attrValue;var fromValue;if(toNode.nodeType===DOCUMENT_FRAGMENT_NODE||fromNode.nodeType===DOCUMENT_FRAGMENT_NODE){return}for(var i=toNodeAttrs.length-1;i>=0;i--){attr=toNodeAttrs[i];attrName=attr.name;attrNamespaceURI=attr.namespaceURI;attrValue=attr.value;if(attrNamespaceURI){attrName=attr.localName||attrName;fromValue=fromNode.getAttributeNS(attrNamespaceURI,attrName);if(fromValue!==attrValue){if(attr.prefix==="xmlns"){attrName=attr.name}fromNode.setAttributeNS(attrNamespaceURI,attrName,attrValue)}}else{fromValue=fromNode.getAttribute(attrName);if(fromValue!==attrValue){fromNode.setAttribute(attrName,attrValue)}}}var fromNodeAttrs=fromNode.attributes;for(var d=fromNodeAttrs.length-1;d>=0;d--){attr=fromNodeAttrs[d];attrName=attr.name;attrNamespaceURI=attr.namespaceURI;if(attrNamespaceURI){attrName=attr.localName||attrName;if(!toNode.hasAttributeNS(attrNamespaceURI,attrName)){fromNode.removeAttributeNS(attrNamespaceURI,attrName)}}else{if(!toNode.hasAttribute(attrName)){fromNode.removeAttribute(attrName)}}}}var range;var NS_XHTML="http://www.w3.org/1999/xhtml";var doc=typeof document==="undefined"?undefined:document;var HAS_TEMPLATE_SUPPORT=!!doc&&"content"in doc.createElement("template");var HAS_RANGE_SUPPORT=!!doc&&doc.createRange&&"createContextualFragment"in doc.createRange();function createFragmentFromTemplate(str){var template=doc.createElement("template");template.innerHTML=str;return template.content.childNodes[0]}function createFragmentFromRange(str){if(!range){range=doc.createRange();range.selectNode(doc.body)}var fragment=range.createContextualFragment(str);return fragment.childNodes[0]}function createFragmentFromWrap(str){var fragment=doc.createElement("body");fragment.innerHTML=str;return fragment.childNodes[0]}function toElement(str){str=str.trim();if(HAS_TEMPLATE_SUPPORT){return createFragmentFromTemplate(str)}else if(HAS_RANGE_SUPPORT){return createFragmentFromRange(str)}return createFragmentFromWrap(str)}function compareNodeNames(fromEl,toEl){var fromNodeName=fromEl.nodeName;var toNodeName=toEl.nodeName;var fromCodeStart,toCodeStart;if(fromNodeName===toNodeName){return true}fromCodeStart=fromNodeName.charCodeAt(0);toCodeStart=toNodeName.charCodeAt(0);if(fromCodeStart<=90&&toCodeStart>=97){return fromNodeName===toNodeName.toUpperCase()}else if(toCodeStart<=90&&fromCodeStart>=97){return toNodeName===fromNodeName.toUpperCase()}else{return false}}function createElementNS(name,namespaceURI){return!namespaceURI||namespaceURI===NS_XHTML?doc.createElement(name):doc.createElementNS(namespaceURI,name)}function moveChildren(fromEl,toEl){var curChild=fromEl.firstChild;while(curChild){var nextChild=curChild.nextSibling;toEl.appendChild(curChild);curChild=nextChild}return toEl}function syncBooleanAttrProp(fromEl,toEl,name){if(fromEl[name]!==toEl[name]){fromEl[name]=toEl[name];if(fromEl[name]){fromEl.setAttribute(name,"")}else{fromEl.removeAttribute(name)}}}var specialElHandlers={OPTION:function(fromEl,toEl){var parentNode=fromEl.parentNode;if(parentNode){var parentName=parentNode.nodeName.toUpperCase();if(parentName==="OPTGROUP"){parentNode=parentNode.parentNode;parentName=parentNode&&parentNode.nodeName.toUpperCase()}if(parentName==="SELECT"&&!parentNode.hasAttribute("multiple")){if(fromEl.hasAttribute("selected")&&!toEl.selected){fromEl.setAttribute("selected","selected");fromEl.removeAttribute("selected")}parentNode.selectedIndex=-1}}syncBooleanAttrProp(fromEl,toEl,"selected")},INPUT:function(fromEl,toEl){syncBooleanAttrProp(fromEl,toEl,"checked");syncBooleanAttrProp(fromEl,toEl,"disabled");if(fromEl.value!==toEl.value){fromEl.value=toEl.value}if(!toEl.hasAttribute("value")){fromEl.removeAttribute("value")}},TEXTAREA:function(fromEl,toEl){var newValue=toEl.value;if(fromEl.value!==newValue){fromEl.value=newValue}var firstChild=fromEl.firstChild;if(firstChild){var oldValue=firstChild.nodeValue;if(oldValue==newValue||!newValue&&oldValue==fromEl.placeholder){return}firstChild.nodeValue=newValue}},SELECT:function(fromEl,toEl){if(!toEl.hasAttribute("multiple")){var selectedIndex=-1;var i=0;var curChild=fromEl.firstChild;var optgroup;var nodeName;while(curChild){nodeName=curChild.nodeName&&curChild.nodeName.toUpperCase();if(nodeName==="OPTGROUP"){optgroup=curChild;curChild=optgroup.firstChild}else{if(nodeName==="OPTION"){if(curChild.hasAttribute("selected")){selectedIndex=i;break}i++}curChild=curChild.nextSibling;if(!curChild&&optgroup){curChild=optgroup.nextSibling;optgroup=null}}}fromEl.selectedIndex=selectedIndex}}};var ELEMENT_NODE=1;var DOCUMENT_FRAGMENT_NODE$1=11;var TEXT_NODE=3;var COMMENT_NODE=8;function noop(){}function defaultGetNodeKey(node){if(node){return node.getAttribute&&node.getAttribute("id")||node.id}}function morphdomFactory(morphAttrs){return function morphdom(fromNode,toNode,options){if(!options){options={}}if(typeof toNode==="string"){if(fromNode.nodeName==="#document"||fromNode.nodeName==="HTML"||fromNode.nodeName==="BODY"){var toNodeHtml=toNode;toNode=doc.createElement("html");toNode.innerHTML=toNodeHtml}else{toNode=toElement(toNode)}}else if(toNode.nodeType===DOCUMENT_FRAGMENT_NODE$1){toNode=toNode.firstElementChild}var getNodeKey=options.getNodeKey||defaultGetNodeKey;var onBeforeNodeAdded=options.onBeforeNodeAdded||noop;var onNodeAdded=options.onNodeAdded||noop;var onBeforeElUpdated=options.onBeforeElUpdated||noop;var onElUpdated=options.onElUpdated||noop;var onBeforeNodeDiscarded=options.onBeforeNodeDiscarded||noop;var onNodeDiscarded=options.onNodeDiscarded||noop;var onBeforeElChildrenUpdated=options.onBeforeElChildrenUpdated||noop;var skipFromChildren=options.skipFromChildren||noop;var addChild=options.addChild||function(parent,child){return parent.appendChild(child)};var childrenOnly=options.childrenOnly===true;var fromNodesLookup=Object.create(null);var keyedRemovalList=[];function addKeyedRemoval(key){keyedRemovalList.push(key)}function walkDiscardedChildNodes(node,skipKeyedNodes){if(node.nodeType===ELEMENT_NODE){var curChild=node.firstChild;while(curChild){var key=undefined;if(skipKeyedNodes&&(key=getNodeKey(curChild))){addKeyedRemoval(key)}else{onNodeDiscarded(curChild);if(curChild.firstChild){walkDiscardedChildNodes(curChild,skipKeyedNodes)}}curChild=curChild.nextSibling}}}function removeNode(node,parentNode,skipKeyedNodes){if(onBeforeNodeDiscarded(node)===false){return}if(parentNode){parentNode.removeChild(node)}onNodeDiscarded(node);walkDiscardedChildNodes(node,skipKeyedNodes)}function indexTree(node){if(node.nodeType===ELEMENT_NODE||node.nodeType===DOCUMENT_FRAGMENT_NODE$1){var curChild=node.firstChild;while(curChild){var key=getNodeKey(curChild);if(key){fromNodesLookup[key]=curChild}indexTree(curChild);curChild=curChild.nextSibling}}}indexTree(fromNode);function handleNodeAdded(el){onNodeAdded(el);var curChild=el.firstChild;while(curChild){var nextSibling=curChild.nextSibling;var key=getNodeKey(curChild);if(key){var unmatchedFromEl=fromNodesLookup[key];if(unmatchedFromEl&&compareNodeNames(curChild,unmatchedFromEl)){curChild.parentNode.replaceChild(unmatchedFromEl,curChild);morphEl(unmatchedFromEl,curChild)}else{handleNodeAdded(curChild)}}else{handleNodeAdded(curChild)}curChild=nextSibling}}function cleanupFromEl(fromEl,curFromNodeChild,curFromNodeKey){while(curFromNodeChild){var fromNextSibling=curFromNodeChild.nextSibling;if(curFromNodeKey=getNodeKey(curFromNodeChild)){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=fromNextSibling}}function morphEl(fromEl,toEl,childrenOnly){var toElKey=getNodeKey(toEl);if(toElKey){delete fromNodesLookup[toElKey]}if(!childrenOnly){var beforeUpdateResult=onBeforeElUpdated(fromEl,toEl);if(beforeUpdateResult===false){return}else if(beforeUpdateResult instanceof HTMLElement){fromEl=beforeUpdateResult;indexTree(fromEl)}morphAttrs(fromEl,toEl);onElUpdated(fromEl);if(onBeforeElChildrenUpdated(fromEl,toEl)===false){return}}if(fromEl.nodeName!=="TEXTAREA"){morphChildren(fromEl,toEl)}else{specialElHandlers.TEXTAREA(fromEl,toEl)}}function morphChildren(fromEl,toEl){var skipFrom=skipFromChildren(fromEl,toEl);var curToNodeChild=toEl.firstChild;var curFromNodeChild=fromEl.firstChild;var curToNodeKey;var curFromNodeKey;var fromNextSibling;var toNextSibling;var matchingFromEl;outer:while(curToNodeChild){toNextSibling=curToNodeChild.nextSibling;curToNodeKey=getNodeKey(curToNodeChild);while(!skipFrom&&curFromNodeChild){fromNextSibling=curFromNodeChild.nextSibling;if(curToNodeChild.isSameNode&&curToNodeChild.isSameNode(curFromNodeChild)){curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling;continue outer}curFromNodeKey=getNodeKey(curFromNodeChild);var curFromNodeType=curFromNodeChild.nodeType;var isCompatible=undefined;if(curFromNodeType===curToNodeChild.nodeType){if(curFromNodeType===ELEMENT_NODE){if(curToNodeKey){if(curToNodeKey!==curFromNodeKey){if(matchingFromEl=fromNodesLookup[curToNodeKey]){if(fromNextSibling===matchingFromEl){isCompatible=false}else{fromEl.insertBefore(matchingFromEl,curFromNodeChild);if(curFromNodeKey){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=matchingFromEl;curFromNodeKey=getNodeKey(curFromNodeChild)}}else{isCompatible=false}}}else if(curFromNodeKey){isCompatible=false}isCompatible=isCompatible!==false&&compareNodeNames(curFromNodeChild,curToNodeChild);if(isCompatible){morphEl(curFromNodeChild,curToNodeChild)}}else if(curFromNodeType===TEXT_NODE||curFromNodeType==COMMENT_NODE){isCompatible=true;if(curFromNodeChild.nodeValue!==curToNodeChild.nodeValue){curFromNodeChild.nodeValue=curToNodeChild.nodeValue}}}if(isCompatible){curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling;continue outer}if(curFromNodeKey){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=fromNextSibling}if(curToNodeKey&&(matchingFromEl=fromNodesLookup[curToNodeKey])&&compareNodeNames(matchingFromEl,curToNodeChild)){if(!skipFrom){addChild(fromEl,matchingFromEl)}morphEl(matchingFromEl,curToNodeChild)}else{var onBeforeNodeAddedResult=onBeforeNodeAdded(curToNodeChild);if(onBeforeNodeAddedResult!==false){if(onBeforeNodeAddedResult){curToNodeChild=onBeforeNodeAddedResult}if(curToNodeChild.actualize){curToNodeChild=curToNodeChild.actualize(fromEl.ownerDocument||doc)}addChild(fromEl,curToNodeChild);handleNodeAdded(curToNodeChild)}}curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling}cleanupFromEl(fromEl,curFromNodeChild,curFromNodeKey);var specialElHandler=specialElHandlers[fromEl.nodeName];if(specialElHandler){specialElHandler(fromEl,toEl)}}var morphedNode=fromNode;var morphedNodeType=morphedNode.nodeType;var toNodeType=toNode.nodeType;if(!childrenOnly){if(morphedNodeType===ELEMENT_NODE){if(toNodeType===ELEMENT_NODE){if(!compareNodeNames(fromNode,toNode)){onNodeDiscarded(fromNode);morphedNode=moveChildren(fromNode,createElementNS(toNode.nodeName,toNode.namespaceURI))}}else{morphedNode=toNode}}else if(morphedNodeType===TEXT_NODE||morphedNodeType===COMMENT_NODE){if(toNodeType===morphedNodeType){if(morphedNode.nodeValue!==toNode.nodeValue){morphedNode.nodeValue=toNode.nodeValue}return morphedNode}else{morphedNode=toNode}}}if(morphedNode===toNode){onNodeDiscarded(fromNode)}else{if(toNode.isSameNode&&toNode.isSameNode(morphedNode)){return}morphEl(morphedNode,toNode,childrenOnly);if(keyedRemovalList){for(var i=0,len=keyedRemovalList.length;i<len;i++){var elToRemove=fromNodesLookup[keyedRemovalList[i]];if(elToRemove){removeNode(elToRemove,elToRemove.parentNode,false)}}}}if(!childrenOnly&&morphedNode!==fromNode&&fromNode.parentNode){if(morphedNode.actualize){morphedNode=morphedNode.actualize(fromNode.ownerDocument||doc)}fromNode.parentNode.replaceChild(morphedNode,fromNode)}return morphedNode}}var morphdom=morphdomFactory(morphAttrs);return morphdom});</script>
-<script>
-(function(){
-class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,typeof o==='function'?o(this.state):o);schedule()}forceUpdate(){schedule()}}
-window.DCLogic=DCLogic;
-})();
-</script>
-<script>var IMG={"01e614dcfb329f838e66a3d8167dc06e": "img/hd-jeunes-m13m-entraineur.webp", "05bc8109d3354c998bdc79b01d5736d0": "img/recepcion-masculino.jpg", "0ea153751982352ce8b4ca09fd06faf0": "img/sponsor-wake-up-form.png", "119c20d314d77409255d774970870975": "img/hd-feminines-filet.webp", "12a292a203127b2e9f156334c80bc826": "img/jeunes-m13f-equipe.webp", "15d43ced00dca9cbc40d6055e81a6585": "img/rival-granville.png", "2ef089977df45c3384de67cd67a3c790": "img/hd-bloqueo-femenino.webp", "2fc285fde388fb262736f20f1bc77908": "img/rival-montmorency.png", "33935564e2488449085c310815225815": "img/sponsor-la-grange.jpg", "355d265bc5513a27f5c1ff502ea02cfd": "img/jeunes-m15f-equipe.webp", "3748f619a6d7e5e886a5c3a7c96492d9": "img/jeunes-m15m-equipe.webp", "4d326effa6f87e11c6d06d846f39c6f6": "img/sponsor-ville-niort.png", "51a98ba304f460eb8218332857d0ea7c": "img/pratiquer-soft-volley-loisirs.webp", "550be7504aebf3203ea2069cf9a020a3": "img/sponsor-europcar.png", "5a69f207bf5019c41dd9bc9586b9f416": "img/sponsor-my-beers.webp", "5b343a28875d12adef1ff1a3e4434643": "img/patron-triangulos.jpg", "5d14e19740e75572c9ca309b2290ab73": "img/sponsor-ihp.jpeg", "629328318a37582019ada38ed7cbf04b": "img/sponsor-bb-hotels.png", "6a28f1aa949f964384f2567f7391f608": "img/pratiquer-volley-sante-ehpad.webp", "7b5bc3e54269e06116b98d05efe9a555": "img/sponsor-cavavin.jpg", "84743c55852f3845b2f77e7072dd9102": "img/rival-quissac.png", "88a33951d6474ee18a70c79e64bafcdd": "img/rival-cvba.png", "8c7b7017afade6006655a78c78dc70c6": "img/sponsor-nouvelle-republique.jpg", "a6f3f794039b4cca92e2846a98b6b144": "img/pratiquer-entreprises.png", "ae0c3b14912c3724bc0a86506e46dac1": "img/hd-jeunes-filles-formation.webp", "b2bd9836269aff28c7bcb01a69a11962": "img/sponsor-chaigneau.webp", "be71856a2e02b7ddae88e492f4771585": "img/sponsor-leclerc-centre.jpg", "bf82c9595487efdd2b707c895efeb63e": "img/logo-vbpn.png", "ce3219791693a6db4ee923b94a4303a8": "img/sponsor-credit-mutuel.jpg", "d689f973cd6eef6d990182685b6936cf": "img/pratiquer-volley-assis.webp", "def0175a9f8a72c01176b762ab6d1248": "img/sponsor-eive.png", "e2650b43ef273960f3f234e80a8b662e": "img/hd-bloqueo-masculino.webp", "ecbf9e2b4a2412276532b34dd9114657": "img/sponsor-restaurant-donjon.png", "f065d0995f6e8f4458f075474eab4638": "img/hd-equipe-m1.webp", "f63153b2bc7b58c0e60d7ffe1aea30f2": "img/ffvolley.svg", "f7fad03113d3db5665436c5abb15bc5e": "img/sponsor-mcdonalds.png", "f92719762573c1797645e6235dca83e8": "img/hd-ataque-femenino.webp", "fee83867a744ec0557390baf6cb2f1f3": "img/sponsor-macif.png"};
+<script>(function(){class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,typeof o==='function'?o(this.state):o);schedule()}forceUpdate(){schedule()}}window.DCLogic=DCLogic;})();</script>
+<script>var IMG={"7b5bc3e54269e06116b98d05efe9a555": "img/sponsor-cavavin.jpg", "be71856a2e02b7ddae88e492f4771585": "img/sponsor-leclerc-centre.jpg", "4d326effa6f87e11c6d06d846f39c6f6": "img/sponsor-ville-niort.png", "ecbf9e2b4a2412276532b34dd9114657": "img/sponsor-restaurant-donjon.png", "f7fad03113d3db5665436c5abb15bc5e": "img/sponsor-mcdonalds.png", "629328318a37582019ada38ed7cbf04b": "img/sponsor-bb-hotels.png", "5d14e19740e75572c9ca309b2290ab73": "img/sponsor-ihp.jpeg", "5a69f207bf5019c41dd9bc9586b9f416": "img/sponsor-my-beers.webp", "fee83867a744ec0557390baf6cb2f1f3": "img/sponsor-macif.png", "0ea153751982352ce8b4ca09fd06faf0": "img/sponsor-wake-up-form.png", "ce3219791693a6db4ee923b94a4303a8": "img/sponsor-credit-mutuel.jpg", "550be7504aebf3203ea2069cf9a020a3": "img/sponsor-europcar.png", "b2bd9836269aff28c7bcb01a69a11962": "img/sponsor-chaigneau.webp", "def0175a9f8a72c01176b762ab6d1248": "img/sponsor-eive.png", "33935564e2488449085c310815225815": "img/sponsor-la-grange.jpg", "8c7b7017afade6006655a78c78dc70c6": "img/sponsor-nouvelle-republique.jpg"};
 
 class Component extends DCLogic {
   constructor(props) {
@@ -542,7 +538,7 @@ class Component extends DCLogic {
       bm: 'img/hd-bloqueo-masculino.webp', rm: 'img/recepcion-masculino.jpg',
       bf: 'img/hd-bloqueo-femenino.webp', af: 'img/hd-ataque-femenino.webp',
       logo: 'img/logo-vbpn.png',
-      j13f: 'img/jeunes-m13f-equipe.webp', j15f: 'img/jeunes-m15f-equipe.webp', j15m: 'img/jeunes-m15m-equipe.webp', m13m: 'img/hd-jeunes-m13m-entraineur.webp', form: 'img/hd-jeunes-filles-formation.webp', filet: 'img/hd-feminines-filet.webp', m1: 'img/hd-equipe-m1.webp'
+      j13f: 'img/jeunes-m13f-equipe.webp', j15f: 'img/jeunes-m15f-equipe.webp', j15m: 'img/jeunes-m15m-equipe.webp', m13m: 'img/hd-jeunes-m13m-entraineur.webp', form: 'img/hd-jeunes-filles-formation.webp', filet: 'img/hd-feminines-filet.webp', m1: 'img/hd-equipe-m1.webp', beach: 'img/hd-beach-action.webp', beachParc: 'img/hd-beach-parc.webp'
     };
     const R = {
       ffv: 'img/ffvolley.svg', mont: 'img/rival-montmorency.png',
@@ -557,11 +553,11 @@ class Component extends DCLogic {
     const chip = (k) => 'display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: ' + CAT[k].soft + '; color: ' + CAT[k].c;
 
     const slideDefs = [
-      { label: 'À la une', short: 'Tournoi pro à Barbusse', kicker: 'À la une · Club · 5 oct.', titre: 'Deux jours de très haut niveau à Barbusse pour le grand tournoi de préparation', texte: 'Les 3 et 4 octobre, le Complexe Henri Barbusse a accueilli quatre équipes professionnelles avant la reprise de leur championnat. Un week-end qui a rempli les tribunes et mobilisé tout le club.', cta: 'Lire l’article', photo: P.bm, pos: '50% 30%', alt: 'Trois joueurs au bloc au filet' },
-      { label: 'Club formateur', short: 'Du baby volley à la N2', kicker: 'Club formateur FFVolley', titre: 'Former des joueurs, et des personnes, depuis 1983.', texte: 'Notre école de volley accompagne chaque joueur, du baby volley à la Nationale 2.', cta: 'Notre projet de formation', photo: P.form, pos: '50% 40%', alt: 'Équipe jeunes féminine du VBP Niort avec son entraîneur' },
-      { label: 'Section sportive', short: 'Lycée de la Venise Verte', kicker: 'Section sportive', titre: 'Étudier et jouer au Lycée de la Venise Verte.', texte: '[Détails de la section à confirmer avec le club.]', cta: 'Découvrir la section', photo: P.bf, pos: '50% 35%', alt: 'Double bloc des joueuses du VBP Niort' },
-      { label: 'Saison 2026-27', short: 'Créneaux et inscription', kicker: 'Saison 2026-2027', titre: 'Rejoignez le club cette saison.', texte: 'Créneaux, tarifs et permanences d’inscription.', cta: 'Voir les créneaux', photo: P.filet, pos: '50% 35%', alt: 'Trois joueurs du VBP Niort au bloc' },
-      { label: 'Beach Parc', short: 'Sandbox, terrains de sable', kicker: 'Beach Parc Sandbox', titre: 'Le plus grand beach parc de Nouvelle-Aquitaine.', texte: 'Réservez un terrain ou organisez votre événement.', cta: 'Réserver un terrain', photo: P.rm, pos: '30% 50%', alt: '[Photo du Beach Parc à fournir]' }
+      { label: 'À la une', short: 'Tournoi pro à Barbusse', kicker: 'À la une · Club · 5 oct.', titre: 'Le très haut niveau s’est invité à Barbusse.', texte: 'Quatre équipes professionnelles ont préparé leur saison chez nous les 3 et 4 octobre, devant des tribunes pleines.', cta: 'Lire l’article', href: 'article.html', photo: P.bm, pos: '50% 30%', alt: 'Trois joueurs du VBP Niort au bloc' },
+      { label: 'Club formateur', short: 'Du baby volley à la N2', kicker: 'Club formateur FFVolley', titre: 'Former des joueurs, et des personnes, depuis 1983.', texte: 'Notre école de volley accompagne chaque joueur du baby volley à la Nationale 2, avec des éducateurs diplômés.', cta: 'Notre projet de formation', href: '#formation', photo: P.form, pos: '50% 40%', alt: 'Équipe jeunes féminine du VBP Niort avec son entraîneur' },
+      { label: 'Section sportive', short: 'Lycée de la Venise Verte', kicker: 'Section sportive', titre: 'Étudier et jouer au Lycée de la Venise Verte.', texte: 'Des entraînements intégrés à l’emploi du temps, encadrés par les éducateurs du club, de la seconde à la terminale.', cta: 'Découvrir la section', href: '#formation', photo: P.bf, pos: '50% 35%', alt: 'Double bloc des joueuses du VBP Niort' },
+      { label: 'Saison 2026-27', short: 'Créneaux et inscription', kicker: 'Saison 2026-2027', titre: 'Il est encore temps de rejoindre le club.', texte: 'Les entraînements ont repris le 3 septembre. Venez essayer : trois séances d’essai offertes avant de vous inscrire.', cta: 'Voir les créneaux', href: 'licences.html', photo: P.filet, pos: '50% 35%', alt: 'Joueuses du VBP Niort au filet' },
+      { label: 'Beach Parc', short: 'Terrains de sable à Niort', kicker: 'Beach Parc Sandbox', titre: 'Le plus grand beach parc de Nouvelle-Aquitaine.', texte: 'Des terrains de sable en accès libre ou à réserver, pour jouer entre amis, s’entraîner ou organiser un événement.', cta: 'Réserver un terrain', href: '#', photo: P.beach, pos: '60% 45%', alt: 'Partie de beach volley au Beach Parc' }
     ];
     const paused = s.hover !== null || !(this.props.rotation ?? true);
     const slides = slideDefs.map((sl, i) => ({
@@ -642,7 +638,7 @@ class Component extends DCLogic {
       { label: '6 – 10 ans', voie: 'Se former', titre: 'École de volley', texte: "Apprendre les gestes du volley en s'amusant. Notre école existe depuis 1983.", creneaux: [{ quand: 'Mer. 17h00 – 18h30', ou: 'Gymnase de Sainte-Pezenne' }, { quand: 'Sam. 10h30 – 11h45', ou: 'Complexe Henri Barbusse' }], photo: P.m13m, alt: 'Jeunes joueuses du VBP Niort' },
       { label: '11 – 18 ans', voie: 'Se former', titre: 'Équipes jeunes M11 à M18', texte: 'Compétition régionale et Coupe de France, ou groupe débutantes pour découvrir.', creneaux: [{ quand: 'Du mardi au samedi selon la catégorie', ou: 'Barbusse et Sainte-Pezenne' }], photo: P.form, alt: 'Équipe jeunes masculine du VBP Niort' },
       { label: 'Lycéens', voie: 'Se former', titre: 'Section sportive Lycée de la Venise Verte', texte: '[Étudier et s’entraîner sur le temps scolaire. Détails à confirmer avec le club.]', creneaux: [{ quand: '[Horaires]', ou: 'Lycée de la Venise Verte' }], photo: P.j15f, alt: 'Équipe jeunes féminine du VBP Niort' },
-      { label: 'Adultes', voie: 'Pratiquer', titre: 'Compétition, loisirs et corpo', texte: 'De la Nationale 2 au loisir, et le soft volley sans niveau requis.', creneaux: [{ quand: 'Lun. 20h00 – 22h00 · loisirs et corpo', ou: 'Gymnase de Sainte-Pezenne' }, { quand: 'Lun. 20h00 – 21h30 · soft volley', ou: 'Gymnase de Sainte-Pezenne' }], photo: P.rm, alt: '[Photo loisirs à fournir]' },
+      { label: 'Adultes', voie: 'Pratiquer', titre: 'Compétition, loisirs et corpo', texte: 'De la Nationale 2 au loisir, et le soft volley sans niveau requis.', creneaux: [{ quand: 'Lun. 20h00 – 22h00 · loisirs et corpo', ou: 'Gymnase de Sainte-Pezenne' }, { quand: 'Lun. 20h00 – 21h30 · soft volley', ou: 'Gymnase de Sainte-Pezenne' }], photo: P.beachParc, alt: '[Photo loisirs à fournir]' },
       { label: '60 ans et +', voie: 'Pratiquer', titre: 'Volley santé et sport pour tous', texte: 'Bouger, garder l’équilibre et partager un moment en groupe, sans compétition.', creneaux: [{ quand: 'Lun. 18h00 – 19h30 · sport pour tous', ou: 'Gymnase de Sainte-Pezenne' }, { quand: 'Interventions en EHPAD', ou: 'Sur demande' }], photo: P.bm, alt: '[Photo volley santé à fournir]' }
     ];
     const ageBtn = (a, i) => ({ label: a.label, selected: s.age === i ? 'true' : 'false', pick: () => this.setState({ age: i }), style: this.pill(s.age === i) });
@@ -697,6 +693,14 @@ class Component extends DCLogic {
         ['Nos partenaires', 'Ils soutiennent le VBP Niort'], ['Devenir partenaire', 'Visibilité et offres'],
         ['Boutique', 'Maillots et goodies du club']] }
     ];
+    const HREF = {
+      'Notre histoire': 'histoire.html', 'Palmarès': 'palmares.html', 'Nos bénévoles': 'benevoles.html', 'Chartes du club': 'benevoles.html#chartes',
+      'Séniors F1': 'equipe.html#f1', 'Séniors M1': 'equipe.html#m1',
+      'Matchs du week-end': 'index.html#matchs', 'Calendrier complet': 'calendrier.html', 'Résultats & classements': 'calendrier.html', 'Saisons précédentes': 'palmares.html',
+      'Baby volley': 'index.html#ages', 'École de volley': 'index.html#ages', 'Section sportive': 'index.html#formation', 'Club formateur': 'index.html#formation',
+      'Soft volley & loisirs': 'index.html#pourtous', 'Volley santé': 'index.html#pourtous', 'Volley assis': 'index.html#pourtous', 'Volley en entreprise': 'index.html#pourtous',
+      'Actualités': 'actualites.html', 'Les Pexiniouzes': 'actualites.html', 'Nos partenaires': 'index.html#partenaires'
+    };
     const mmNav = MM.map(m => {
       const on = s.mm === m.id;
       return { label: m.id === 'calendrier' ? 'Calendrier & résultats' : m.id === 'actus' ? 'Actus' : m.label, expanded: on ? 'true' : 'false',
@@ -706,7 +710,7 @@ class Component extends DCLogic {
     });
     const mmCols = MM.map(m => ({ label: m.label, couleur: m.c, trait: s.mm === m.id ? m.c : '#d3e1ee',
       cls: 'mm-col' + (s.mm && s.mm !== m.id ? ' dim' : ''),
-      liens: m.liens.map(([t, d, c]) => ({ t, d, dot: dot(c) })) }));
+      liens: m.liens.map(([t, d, c]) => ({ t, d, dot: dot(c), href: HREF[t] || '#' })) }));
     return {
       apercu, sansApercu: !apercu, mmNav, mmCols, mmOuvert: !!s.mm, mmFermer: () => this.setState({ mm: null }),
       slides, thumbs, slideNum: s.slide + 1, slideLabel: slideDefs[s.slide].label,
@@ -723,7 +727,8 @@ class Component extends DCLogic {
 window.Component=Component;</script>
 <script>
 (function(){
-var C=new Component({});var tpl=document.getElementById('dc-tpl').content;var root=document.getElementById('app');var pending=false;
+var ancre=decodeURIComponent(location.hash.slice(1));
+var C=new Component({ancre:ancre});var tpl=document.getElementById('dc-tpl').content;var root=document.getElementById('app');var pending=false;
 window.schedule=function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;draw()})};
 function get(ctx,e){e=e.trim();if(e==='true')return true;if(e==='false')return false;if(/^-?\d+(\.\d+)?$/.test(e))return +e;return e.split('.').reduce(function(o,k){return o==null?o:o[k]},ctx)}
 function sub(s,ctx){var m=s.match(/^\s*\{\{([^}]+)\}\}\s*$/);if(m)return get(ctx,m[1]);return s.replace(/\{\{([^}]+)\}\}/g,function(_,e){var v=get(ctx,e);return v==null?'':v})}
@@ -732,8 +737,10 @@ var SVGNS='http://www.w3.org/2000/svg';
 function proc(node,ctx,parent){
  if(node.nodeType===3){parent.appendChild(document.createTextNode(sub(node.textContent,ctx)));return}
  if(node.nodeType!==1)return;var tag=node.localName;
- if(tag==='sc-for'){var list=get(ctx,node.getAttribute('list').replace(/[{}]/g,''))||[];var as=node.getAttribute('as');list.forEach(function(it,i){var c=Object.create(ctx);c[as]=it;c.$index=i;node.childNodes.forEach(function(ch){proc(ch,c,parent)})});return}
- if(tag==='sc-if'){if(get(ctx,node.getAttribute('value').replace(/[{}]/g,'')))node.childNodes.forEach(function(ch){proc(ch,ctx,parent)});return}
+ var sc=tag==='template'&&node.getAttribute('data-sc');var kids=sc&&node.content&&node.content.childNodes.length?node.content.childNodes:node.childNodes;
+ if(sc==='for'){var list=get(ctx,node.getAttribute('list').replace(/[{}]/g,''))||[];var as=node.getAttribute('as');list.forEach(function(it,i){var c=Object.create(ctx);c[as]=it;c.$index=i;kids.forEach(function(ch){proc(ch,c,parent)})});return}
+ if(sc==='if'){if(get(ctx,node.getAttribute('value').replace(/[{}]/g,'')))kids.forEach(function(ch){proc(ch,ctx,parent)});return}
+ if(tag==='dc-import')return;
  var el=node.namespaceURI===SVGNS?document.createElementNS(SVGNS,tag):document.createElement(tag);
  for(var i=0;i<node.attributes.length;i++){var a=node.attributes[i];var v=sub(a.value,ctx);
   if(/^on/i.test(a.name)){var t=a.name.slice(2).toLowerCase();el.__h=el.__h||{};el.__h[t]=v;bind(el,t);continue}
@@ -749,12 +756,14 @@ function draw(){var nx=build();
    if(from===document.activeElement&&(from.tagName==='INPUT'||from.tagName==='SELECT'))return false;
    return true}})}
 draw();if(C.componentDidMount)C.componentDidMount();
-// liens vers des pages non encore maquettées
+if(ancre&&document.getElementById(ancre))setTimeout(function(){document.getElementById(ancre).scrollIntoView()},50);
+window.addEventListener('hashchange',function(){var h=decodeURIComponent(location.hash.slice(1));if(h&&!document.getElementById(h))location.reload()});
 var toast=document.getElementById('toast');var tt;
 document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
- if(h==='#'||/\.dc\.html/.test(h)){ev.preventDefault();toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},2600)}});
-document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&C.state.mm){C.setState({mm:null})}});
+ if(h==='#'){ev.preventDefault();toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},2600)}});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&C.state&&C.state.mm){C.setState({mm:null})}});
 })();
 </script>
+<script></script>
 </body>
 </html>

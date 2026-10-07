@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VBP Niort · Palmarès</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo-vbpn.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&amp;family=Open+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#1c5fa6}a:hover{color:#1b4180}
+.wrap{box-sizing:border-box;width:100%;max-width:1280px;margin:0 auto;padding-left:24px;padding-right:24px}
+@media (min-width:1440px){.wrap{max-width:1400px;padding-left:32px;padding-right:32px}}
+@media (min-width:1680px){.wrap{max-width:1600px}}
+:focus-visible{outline:2px solid #1c5fa6;outline-offset:2px}
+.dark :focus-visible{outline-color:#ffc21a}
+.score{font-family:'Archivo','Helvetica Neue',Arial,sans-serif;font-stretch:125%;font-weight:800;font-variant-numeric:tabular-nums}
+.btn{transition:background-color .2s,border-color .2s,color .2s}
+.btn-cta:hover{background:#ffd24d !important}
+.only-m{display:none !important}
+@media (max-width:760px){.only-d{display:none !important}.only-m{display:flex !important}.big-h1{font-size:44px !important}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+.los{display:inline-block;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.diag-b{clip-path:polygon(0 0,100% 0,100% calc(100% - 56px),0 100%);padding-bottom:40px}
+@media (max-width: 760px){.diag-b{clip-path:polygon(0 0,100% 0,100% calc(100% - 28px),0 100%);padding-bottom:20px}}
+</style>
+
+<style>
+.los{display:inline-block;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.mm-btn{transition:color .2s}.mm-btn:hover{color:#1c5fa6 !important}.mm-btn svg{transition:transform .25s}
+.mm-col{transition:opacity .3s,filter .3s}
+.mm-col.dim,.mm-grid:hover .mm-col,.mm-grid:focus-within .mm-col{opacity:.36;filter:blur(1.4px) saturate(.5)}
+.mm-grid .mm-col:hover,.mm-grid .mm-col:focus-within{opacity:1 !important;filter:none !important}
+.mm-lien{transition:background-color .2s}.mm-lien:hover{background:#eaf3fa}.mm-lien:hover .mm-t{color:#1c5fa6}
+@keyframes mmIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}.mm-panel{animation:mmIn .28s cubic-bezier(.2,.7,.2,1)}
+.nav-m{display:none !important}.nav-d{flex-wrap:nowrap !important;white-space:nowrap}
+@media (max-width:1360px){.nav-d{gap:20px !important;font-size:15px !important}.h-boutique{display:none !important}}
+@media (max-width:1200px){.h-ffv{display:none !important}.nav-d{gap:16px !important}.nav-d svg{display:none}}
+@media (max-width:1080px){.nav-d,#mega-menu,.mm-voile{display:none !important}.only-m.nav-m{display:flex !important}}
+@media (min-width:761px) and (max-width:1080px){.only-m.nav-m{margin-left:0 !important}}
+
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:100;max-width:calc(100% - 32px);padding:14px 20px;border-radius:12px;background:#0b1b33;color:#fff;font:600 15px/22px 'Open Sans',Arial,sans-serif;transition:opacity .25s,transform .25s}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.maq-tag{position:fixed;right:12px;bottom:12px;z-index:90;padding:6px 10px;border-radius:8px;background:rgba(11,27,51,.85);color:#fff;font:600 12px/16px 'Open Sans',Arial,sans-serif;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<template id="dc-tpl">
+<div style="background: #ffffff; color: #0b1b33; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 17px; line-height: 27px">
+
+
+
+<nav aria-label="Le club" style="background: #eaf3fa; border-bottom: 1px solid #d3e1ee">
+<div class="wrap" style="display: flex; gap: 4px; overflow-x: auto; font-size: 15px; font-weight: 600">
+<a href="histoire.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #4f5f77; text-decoration: none; white-space: nowrap">Notre histoire</a>
+<a href="#" aria-current="page" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #0b1b33; text-decoration: none; border-bottom: 3px solid #1c5fa6; white-space: nowrap">Palmarès</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #4f5f77; text-decoration: none; white-space: nowrap">Organigramme</a>
+<a href="benevoles.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #4f5f77; text-decoration: none; white-space: nowrap">Nos bénévoles</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #4f5f77; text-decoration: none; white-space: nowrap">Chartes du club</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 16px; color: #4f5f77; text-decoration: none; white-space: nowrap">Gymnases</a>
+</div>
+</nav>
+
+<!-- PORTADA -->
+<section class="dark diag-b" style="position: relative; background: #0b1b33; color: #ffffff; overflow: hidden">
+<img src="img/patron-triangulos.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(11,27,51,.82) 0%, rgba(11,27,51,.6) 55%, rgba(11,27,51,.45) 100%)"></div>
+<div class="wrap" style="position: relative; padding-top: 72px; padding-bottom: 72px; max-width: 1280px">
+<span style="font-size: 13px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #7cc4ec"><span aria-hidden="true" style="display: inline-flex; gap: 5px; align-items: center; margin-right: 10px; vertical-align: middle"><span class="los" style="width: 18px; height: 10px; background: #ffc21a"></span><span class="los" style="width: 14px; height: 8px; background: #2aa3da"></span><span class="los" style="width: 10px; height: 6px; background: #7cc4ec"></span></span>Palmarès</span>
+<h1 class="big-h1" style="margin: 12px 0 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 64px; line-height: 1; letter-spacing: -0.015em; max-width: 820px; text-wrap: balance">Des titres chez les jeunes, de l'ambition chez les grands.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 31px; color: #c9d6e6; max-width: 640px">Les grands moments du club et le parcours de nos équipes premières et réserves depuis 2002.</p>
+</div>
+</section>
+
+<!-- LES TITRES : frise -->
+<section style="padding: 72px 0">
+<div class="wrap">
+<h2 style="margin: 0 0 32px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 36px">Les grands moments</h2>
+<ol style="list-style: none; margin: 0; padding: 0; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 16px">
+<template data-sc="for" list="{{moments}}" as="m" hint-placeholder-count="6">
+<li style="position: relative; padding: 24px 20px 20px; border: 1px solid #d3e1ee; border-top: 4px solid {{m.c}}; border-radius: 16px; display: flex; flex-direction: column; gap: 6px">
+<span class="score" style="font-size: 32px; line-height: 34px">{{m.annee}}</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px">{{m.titre}}</span>
+<span style="font-size: 14px; line-height: 20px; color: #4f5f77">{{m.detail}}</span>
+</li>
+</template>
+</ol>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; padding: 24px 28px; background: #0b1b33; color: #ffffff; border-radius: 20px; position: relative; overflow: hidden">
+<img src="img/patron-triangulos.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .18">
+<span style="position: relative; flex: 0 0 auto; display: flex; padding: 12px; background: #ffffff; border-radius: 14px"><img src="img/ffvolley.svg" alt="Fédération française de volley" style="width: 72px; height: auto; display: block"></span>
+<div style="position: relative; flex: 1 1 420px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #7cc4ec">Distinction fédérale</div>
+<div style="margin-top: 6px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; line-height: 32px">Club formateur reconnu par la FFVolley</div>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 24px; color: #c9d6e6">[Nom exact du prix FFVolley] · récompensé chaque saison depuis [année]. [Années à confirmer avec le club.]</p>
+</div>
+<a href="histoire.html" style="position: relative; display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 2px solid #ffffff; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: 700">Notre école de volley</a>
+</div>
+</div>
+</section>
+
+<!-- NIVEAUX DEPUIS 2002 -->
+<section style="background: #eaf3fa; padding: 72px 0">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: flex-end; justify-content: space-between; margin-bottom: 28px">
+<div><h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 36px">Le niveau de nos équipes depuis 2002</h2><p style="margin: 6px 0 0; color: #4f5f77; max-width: 640px">Chaque point est une saison. Survolez-le pour voir le championnat et l'encadrement.</p></div>
+<div role="tablist" aria-label="Affichage" style="display: flex; gap: 4px; padding: 4px; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 10px">
+<template data-sc="for" list="{{vues}}" as="v" hint-placeholder-count="2"><button type="button" role="tab" aria-selected="{{v.selected}}" onClick="{{v.pick}}" style="{{v.style}}">{{v.label}}</button></template>
+</div>
+</div>
+
+<template data-sc="if" value="{{vueGraph}}" hint-placeholder-val="{{true}}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 560px), 1fr)); gap: 16px">
+<template data-sc="for" list="{{equipes}}" as="e" hint-placeholder-count="4">
+<figure style="margin: 0; padding: 20px 20px 12px; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 20px">
+<figcaption style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px"><span aria-hidden="true" style="width: 18px; height: 3px; border-radius: 2px; background: {{e.c}}"></span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px">{{e.nom}}</span><span style="font-size: 14px; color: #4f5f77">{{e.sous}}</span></figcaption>
+<div style="position: relative">
+<svg viewBox="0 0 600 240" role="img" aria-label="{{e.aria}}" style="width: 100%; height: auto; display: block; overflow: visible; font-family: 'Open Sans', sans-serif">
+<template data-sc="for" list="{{niveaux}}" as="n" hint-placeholder-count="6">
+<line x1="96" x2="590" y1="{{n.y}}" y2="{{n.y}}" stroke="#e3ebf3" stroke-width="1"></line>
+<text x="88" y="{{n.ty}}" text-anchor="end" font-size="12" fill="#4f5f77">{{n.label}}</text>
+</template>
+<template data-sc="for" list="{{ticks}}" as="t" hint-placeholder-count="6"><text x="{{t.x}}" y="232" text-anchor="middle" font-size="12" fill="#4f5f77">{{t.label}}</text></template>
+<path d="{{e.path}}" fill="none" stroke="{{e.c}}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+<template data-sc="for" list="{{e.points}}" as="p" hint-placeholder-count="24">
+<circle cx="{{p.x}}" cy="{{p.y}}" r="{{p.r}}" fill="{{e.c}}" stroke="#ffffff" stroke-width="2"></circle>
+</template>
+<template data-sc="for" list="{{e.labels}}" as="l" hint-placeholder-count="2"><text x="{{l.x}}" y="{{l.y}}" text-anchor="middle" font-size="12" font-weight="700" fill="#0b1b33">{{l.t}}</text></template>
+<template data-sc="for" list="{{e.hits}}" as="h" hint-placeholder-count="24">
+<rect x="{{h.x}}" y="0" width="{{h.w}}" height="215" fill="transparent" onMouseEnter="{{h.enter}}" onMouseLeave="{{h.leave}}"></rect>
+</template>
+</svg>
+<template data-sc="if" value="{{e.hasTip}}" hint-placeholder-val="{{false}}">
+<div role="status" style="{{e.tipStyle}}"><span class="score" style="display: block; font-size: 13px">{{e.tip.saison}}</span><span style="display: block; font-weight: 700">{{e.tip.niveau}}</span><span style="display: block; color: #4f5f77">{{e.tip.coach}}</span></div>
+</template>
+</div>
+</figure>
+</template>
+</div>
+</template>
+
+<template data-sc="if" value="{{vueTable}}" hint-placeholder-val="{{false}}">
+<div style="overflow-x: auto; background: #ffffff; border: 1px solid #d3e1ee; border-radius: 20px">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 20px; min-width: 760px">
+<thead><tr style="text-align: left; color: #4f5f77; font-size: 12px"><th scope="col" style="padding: 14px 16px">Saison</th><th scope="col" style="padding: 14px 16px">Féminines 1</th><th scope="col" style="padding: 14px 16px">Féminines 2</th><th scope="col" style="padding: 14px 16px">Masculins 1</th><th scope="col" style="padding: 14px 16px">Masculins 2</th></tr></thead>
+<tbody>
+<template data-sc="for" list="{{lignes}}" as="r" hint-placeholder-count="24"><tr style="border-top: 1px solid #eef3f8"><th scope="row" class="score" style="padding: 10px 16px; text-align: left; font-size: 13px">{{r.saison}}</th><template data-sc="for" list="{{r.cells}}" as="c" hint-placeholder-count="4"><td style="padding: 10px 16px"><span style="display: block; font-weight: 700">{{c.n}}</span><span style="display: block; color: #4f5f77; font-size: 13px">{{c.coach}}</span></td></template></tr></template>
+</tbody>
+</table>
+</div>
+</template>
+<p style="margin: 16px 0 0; font-size: 13px; line-height: 19px; color: #4f5f77">Niveaux du plus bas au plus haut : Régionale, Pré-nationale (ou Accession nationale), Nationale 3, Nationale 2, Nationale 1, Élite. La Nationale 1 a disparu en 2013 au profit de la Division Élite. 2008 – 2011 : entente EVN avec le Niort Volley Ball pour l'équipe masculine. Saison 2025 – 26 à compléter.</p>
+</div>
+</section>
+
+<footer class="dark" style="background: #0b1b33; color: #c9d6e6; padding: 28px 0; font-size: 14px; line-height: 20px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center">
+<img src="img/logo-vbpn.png" alt="" style="width: 48px; height: 48px">
+<span style="color: #ffffff; font-weight: 600">Volley-Ball Pexinois Niort</span>
+<span>Complexe Henri Barbusse · Gymnase de Sainte-Pezenne</span>
+<a href="#" style="color: #c9d6e6; margin-left: auto">Mentions légales</a>
+</div>
+</footer>
+</div>
+</template>
+<div id="vbp-header" data-actif="club" style="position: relative; z-index: 60; color: #0b1b33; font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif; font-size: 17px; line-height: 27px"><header style="position: relative; z-index: 60; background: #ffffff; border-bottom: 1px solid #d3e1ee">
+<div class="wrap" style="padding-top: 12px; padding-bottom: 12px; display: flex; flex-wrap: nowrap; gap: 12px 28px; align-items: center">
+<span style="display: flex; align-items: center; gap: 16px; flex: 0 0 auto">
+<a href="index.html" aria-label="VBP Niort, accueil" style="display: flex"><img src="img/logo-vbpn.png" alt="VBP Niort, accueil" style="width: 72px; height: 72px; display: block"></a>
+
+<a href="#" class="only-d h-ffv" title="Club affilié à la Fédération française de volley" style="display: flex; align-items: center; gap: 16px; text-decoration: none"><span aria-hidden="true" style="width: 1px; height: 44px; background: #d3e1ee"></span><img src="img/ffvolley.svg" alt="Club affilié à la FFVolley" style="width: 46px; height: auto; display: block"></a>
+
+</span>
+
+<nav class="only-d nav-d" aria-label="Menu principal" style="display: flex; flex-wrap: wrap; gap: 4px 26px; flex: 1 1 auto; min-width: 0; align-self: stretch; font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; font-size: 16px">
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid #1c5fa6; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #1c5fa6" data-id="club">Le club<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="transform: rotate(180deg)"><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid transparent; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #0b1b33" data-id="equipes">Équipes<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style=""><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid transparent; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #0b1b33" data-id="calendrier">Calendrier &amp; résultats<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style=""><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid transparent; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #0b1b33" data-id="formation">Formation<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style=""><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid transparent; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #0b1b33" data-id="pourtous">Volley pour tous<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style=""><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+<button type="button" class="mm-btn" aria-expanded="false" aria-controls="mega-menu" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; border-bottom: 3px solid transparent; margin-bottom: -13px; padding-bottom: 10px; background: none; font: inherit; cursor: pointer; color: #0b1b33" data-id="actus">Actus<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style=""><path d="M2.5 4.5L6 8l3.5-3.5"></path></svg></button>
+
+</nav>
+
+<div class="only-d h-cta" style="display: flex; gap: 20px; align-items: center; margin-left: auto">
+<a href="#" class="h-boutique" style="font-size: 15px; color: #4f5f77; text-decoration: none; font-weight: 600">Boutique</a>
+<a href="licences.html" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px">Se licencier</a>
+</div>
+<button type="button" class="only-m nav-m" aria-controls="menu-mobile" style="margin-left: auto; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; border: 1px solid #5a82aa; border-radius: 8px; background: #ffffff; color: #0b1b33; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer">
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="width: 18px; height: 2px; background: #0b1b33"></span><span style="width: 18px; height: 2px; background: #0b1b33"></span><span style="width: 18px; height: 2px; background: #0b1b33"></span></span>Menu</button>
+</div>
+
+
+<div class="only-d mm-voile" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 100%; height: 1400px; background: rgba(11,27,51,.55)" hidden=""></div>
+<div id="mega-menu" class="only-d mm-panel" style="position: absolute; left: 0; right: 0; top: 100%; background: #ffffff; border-bottom: 1px solid #d3e1ee" hidden="">
+<div class="wrap" style="padding-top: 36px; padding-bottom: 32px">
+<div role="list" class="mm-grid" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px">
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #1b4180; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1b4180" data-c="#1b4180"><span class="los" style="width: 16px; height: 9px; background: #1b4180"></span>Le club</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="histoire.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Notre histoire</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Du stabilisé de Sainte-Pezenne à aujourd’hui</span></a></li>
+
+<li><a href="palmares.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Palmarès</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Titres et parcours depuis 2002</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Le bureau</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Les dirigeants et les commissions</span></a></li>
+
+<li><a href="benevoles.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Nos bénévoles</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Ceux qui font tenir le club debout</span></a></li>
+
+<li><a href="benevoles.html#chartes" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Chartes du club</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Nos engagements, à lire et signer</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Nos gymnases</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Barbusse et Sainte-Pezenne</span></a></li>
+
+</ul>
+</div>
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #d3e1ee; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1c5fa6" data-c="#1c5fa6"><span class="los" style="width: 16px; height: 9px; background: #1c5fa6"></span>Équipes</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="equipe.html#f1" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="width: 8px; height: 8px; border-radius: 9999px; flex: 0 0 8px; background: #9b2c72"></span>Séniors F1</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Nationale 2 féminine</span></a></li>
+
+<li><a href="equipe.html#m1" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="width: 8px; height: 8px; border-radius: 9999px; flex: 0 0 8px; background: #1c5fa6"></span>Séniors M1</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Équipe première masculine</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="width: 8px; height: 8px; border-radius: 9999px; flex: 0 0 8px; background: #5a82aa"></span>Réserves F2 · M2</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Championnats régionaux</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="width: 8px; height: 8px; border-radius: 9999px; flex: 0 0 8px; background: #0e6b5c"></span>Jeunes M9 à M18</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Toutes nos équipes de jeunes</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="width: 8px; height: 8px; border-radius: 9999px; flex: 0 0 8px; background: #b98500"></span>Loisirs</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Compétition loisir et détente</span></a></li>
+
+</ul>
+</div>
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #d3e1ee; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1c5fa6" data-c="#1c5fa6"><span class="los" style="width: 16px; height: 9px; background: #1c5fa6"></span>Calendrier</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="index.html#matchs" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Matchs du week-end</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Prochains matchs et résultats</span></a></li>
+
+<li><a href="calendrier.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Calendrier complet</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Toutes les rencontres de la saison</span></a></li>
+
+<li><a href="calendrier.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Résultats &amp; classements</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Séniors féminins et masculins</span></a></li>
+
+<li><a href="palmares.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Saisons précédentes</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">L’historique des résultats</span></a></li>
+
+</ul>
+</div>
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #d3e1ee; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #0e6b5c" data-c="#0e6b5c"><span class="los" style="width: 16px; height: 9px; background: #0e6b5c"></span>Formation</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="index.html#ages" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Baby volley</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Dès 4 ans, jouer avec le ballon</span></a></li>
+
+<li><a href="index.html#ages" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>École de volley</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">M9 à M13, apprendre en s’amusant</span></a></li>
+
+<li><a href="index.html#formation" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Section sportive</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Volley et études au lycée</span></a></li>
+
+<li><a href="index.html#formation" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Club formateur</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Label FFVolley et éducateurs diplômés</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Stages vacances</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Pendant les petites vacances</span></a></li>
+
+</ul>
+</div>
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #d3e1ee; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #8a5a00" data-c="#8a5a00"><span class="los" style="width: 16px; height: 9px; background: #8a5a00"></span>Volley pour tous</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="index.html#pourtous" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Soft volley &amp; loisirs</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Pour reprendre en douceur</span></a></li>
+
+<li><a href="index.html#pourtous" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Volley santé</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Bouger, à tout âge, jusqu’en EHPAD</span></a></li>
+
+<li><a href="index.html#pourtous" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Volley assis</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Valides et handisport ensemble</span></a></li>
+
+<li><a href="index.html#pourtous" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Volley en entreprise</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Tournoi inter-entreprises</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Beach volley</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Aux beaux jours, sur le sable</span></a></li>
+
+</ul>
+</div>
+
+<div role="listitem" class="mm-col">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; margin-bottom: 6px; border-bottom: 2px solid #d3e1ee; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1b4180" data-c="#1b4180"><span class="los" style="width: 16px; height: 9px; background: #1b4180"></span>Actus &amp; partenaires</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+
+<li><a href="actualites.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Actualités</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">La vie du club, chaque semaine</span></a></li>
+
+<li><a href="actualites.html" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Les Pexiniouzes</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">La lettre mensuelle du club</span></a></li>
+
+<li><a href="index.html#partenaires" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Nos partenaires</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Ils soutiennent le VBP Niort</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Devenir partenaire</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Visibilité et offres</span></a></li>
+
+<li><a href="#" class="mm-lien" style="display: block; padding: 10px 12px; margin: 0 -12px; border-radius: 10px; text-decoration: none"><span class="mm-t" style="display: flex; align-items: center; gap: 8px; color: #0b1b33; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; line-height: 22px"><span style="display: none"></span>Boutique</span><span style="display: block; margin-top: 2px; color: #4f5f77; font-size: 13px; line-height: 19px">Maillots et goodies du club</span></a></li>
+
+</ul>
+</div>
+
+</div>
+</div>
+<div class="dark" style="position: relative; background: #0b1b33; color: #ffffff; overflow: hidden">
+<img src="img/patron-triangulos.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(11,27,51,.88) 0%, rgba(11,27,51,.66) 60%, rgba(11,27,51,.5) 100%)"></div>
+<div class="wrap" style="position: relative; padding-top: 18px; padding-bottom: 18px; display: flex; flex-wrap: wrap; gap: 14px 32px; align-items: center">
+<span style="display: flex; align-items: center; gap: 14px"><span style="display: flex; padding: 6px; background: #ffffff; border-radius: 8px"><img src="img/ffvolley.svg" alt="" style="width: 34px; height: auto; display: block"></span><span style="font-size: 14px; line-height: 20px; color: #c9d6e6"><strong style="color: #ffffff">Club affilié FFVolley</strong><br>Club formateur labellisé · [année]</span></span>
+<span style="font-size: 14px; line-height: 20px; color: #c9d6e6">Complexe Henri Barbusse · Gymnase de Sainte-Pezenne</span>
+<span style="margin-left: auto; display: flex; gap: 12px; align-items: center">
+<a href="#" style="color: #7cc4ec; font-weight: 600; font-size: 15px; text-decoration: none">Nous contacter</a>
+<a href="licences.html" class="btn btn-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px">Essayer gratuitement</a>
+</span>
+</div>
+</div>
+</div>
+
+<nav id="menu-mobile" aria-label="Menu principal" style="border-top: 1px solid #d3e1ee" hidden="">
+<div class="wrap" style="padding-top: 4px; padding-bottom: 24px; display: flex; flex-direction: column; font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif">
+<a href="histoire.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Le club</a>
+<a href="equipe.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Équipes</a>
+<a href="calendrier.html" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Calendrier &amp; résultats</a>
+<a href="#formation" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Formation</a>
+<a href="#ages" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Volley pour tous</a>
+<a href="#actus" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Actus</a>
+<a href="#" style="display: flex; align-items: center; min-height: 56px; border-bottom: 1px solid #d3e1ee; color: #0b1b33; font-size: 22px; font-weight: 700; text-decoration: none">Partenaires</a>
+<a href="#" style="display: flex; align-items: center; min-height: 52px; color: #4f5f77; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; text-decoration: none">Boutique</a>
+<a href="licences.html" class="btn btn-cta" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; min-height: 52px; background: #ffc21a; color: #0b1b33; border-radius: 8px; text-decoration: none; font-family: 'Open Sans', sans-serif; font-weight: 700">Se licencier</a>
+</div>
+</nav></header></div>
+<div id="app"></div>
+<div id="toast" role="status" aria-live="polite">Cette page sera ajoutée dans une prochaine version de la maquette.</div>
+<div class="maq-tag" aria-hidden="true">Maquette · contenus provisoires</div>
+<script>(function(global,factory){typeof exports==="object"&&typeof module!=="undefined"?module.exports=factory():typeof define==="function"&&define.amd?define(factory):(global=global||self,global.morphdom=factory())})(this,function(){"use strict";var DOCUMENT_FRAGMENT_NODE=11;function morphAttrs(fromNode,toNode){var toNodeAttrs=toNode.attributes;var attr;var attrName;var attrNamespaceURI;var attrValue;var fromValue;if(toNode.nodeType===DOCUMENT_FRAGMENT_NODE||fromNode.nodeType===DOCUMENT_FRAGMENT_NODE){return}for(var i=toNodeAttrs.length-1;i>=0;i--){attr=toNodeAttrs[i];attrName=attr.name;attrNamespaceURI=attr.namespaceURI;attrValue=attr.value;if(attrNamespaceURI){attrName=attr.localName||attrName;fromValue=fromNode.getAttributeNS(attrNamespaceURI,attrName);if(fromValue!==attrValue){if(attr.prefix==="xmlns"){attrName=attr.name}fromNode.setAttributeNS(attrNamespaceURI,attrName,attrValue)}}else{fromValue=fromNode.getAttribute(attrName);if(fromValue!==attrValue){fromNode.setAttribute(attrName,attrValue)}}}var fromNodeAttrs=fromNode.attributes;for(var d=fromNodeAttrs.length-1;d>=0;d--){attr=fromNodeAttrs[d];attrName=attr.name;attrNamespaceURI=attr.namespaceURI;if(attrNamespaceURI){attrName=attr.localName||attrName;if(!toNode.hasAttributeNS(attrNamespaceURI,attrName)){fromNode.removeAttributeNS(attrNamespaceURI,attrName)}}else{if(!toNode.hasAttribute(attrName)){fromNode.removeAttribute(attrName)}}}}var range;var NS_XHTML="http://www.w3.org/1999/xhtml";var doc=typeof document==="undefined"?undefined:document;var HAS_TEMPLATE_SUPPORT=!!doc&&"content"in doc.createElement("template");var HAS_RANGE_SUPPORT=!!doc&&doc.createRange&&"createContextualFragment"in doc.createRange();function createFragmentFromTemplate(str){var template=doc.createElement("template");template.innerHTML=str;return template.content.childNodes[0]}function createFragmentFromRange(str){if(!range){range=doc.createRange();range.selectNode(doc.body)}var fragment=range.createContextualFragment(str);return fragment.childNodes[0]}function createFragmentFromWrap(str){var fragment=doc.createElement("body");fragment.innerHTML=str;return fragment.childNodes[0]}function toElement(str){str=str.trim();if(HAS_TEMPLATE_SUPPORT){return createFragmentFromTemplate(str)}else if(HAS_RANGE_SUPPORT){return createFragmentFromRange(str)}return createFragmentFromWrap(str)}function compareNodeNames(fromEl,toEl){var fromNodeName=fromEl.nodeName;var toNodeName=toEl.nodeName;var fromCodeStart,toCodeStart;if(fromNodeName===toNodeName){return true}fromCodeStart=fromNodeName.charCodeAt(0);toCodeStart=toNodeName.charCodeAt(0);if(fromCodeStart<=90&&toCodeStart>=97){return fromNodeName===toNodeName.toUpperCase()}else if(toCodeStart<=90&&fromCodeStart>=97){return toNodeName===fromNodeName.toUpperCase()}else{return false}}function createElementNS(name,namespaceURI){return!namespaceURI||namespaceURI===NS_XHTML?doc.createElement(name):doc.createElementNS(namespaceURI,name)}function moveChildren(fromEl,toEl){var curChild=fromEl.firstChild;while(curChild){var nextChild=curChild.nextSibling;toEl.appendChild(curChild);curChild=nextChild}return toEl}function syncBooleanAttrProp(fromEl,toEl,name){if(fromEl[name]!==toEl[name]){fromEl[name]=toEl[name];if(fromEl[name]){fromEl.setAttribute(name,"")}else{fromEl.removeAttribute(name)}}}var specialElHandlers={OPTION:function(fromEl,toEl){var parentNode=fromEl.parentNode;if(parentNode){var parentName=parentNode.nodeName.toUpperCase();if(parentName==="OPTGROUP"){parentNode=parentNode.parentNode;parentName=parentNode&&parentNode.nodeName.toUpperCase()}if(parentName==="SELECT"&&!parentNode.hasAttribute("multiple")){if(fromEl.hasAttribute("selected")&&!toEl.selected){fromEl.setAttribute("selected","selected");fromEl.removeAttribute("selected")}parentNode.selectedIndex=-1}}syncBooleanAttrProp(fromEl,toEl,"selected")},INPUT:function(fromEl,toEl){syncBooleanAttrProp(fromEl,toEl,"checked");syncBooleanAttrProp(fromEl,toEl,"disabled");if(fromEl.value!==toEl.value){fromEl.value=toEl.value}if(!toEl.hasAttribute("value")){fromEl.removeAttribute("value")}},TEXTAREA:function(fromEl,toEl){var newValue=toEl.value;if(fromEl.value!==newValue){fromEl.value=newValue}var firstChild=fromEl.firstChild;if(firstChild){var oldValue=firstChild.nodeValue;if(oldValue==newValue||!newValue&&oldValue==fromEl.placeholder){return}firstChild.nodeValue=newValue}},SELECT:function(fromEl,toEl){if(!toEl.hasAttribute("multiple")){var selectedIndex=-1;var i=0;var curChild=fromEl.firstChild;var optgroup;var nodeName;while(curChild){nodeName=curChild.nodeName&&curChild.nodeName.toUpperCase();if(nodeName==="OPTGROUP"){optgroup=curChild;curChild=optgroup.firstChild}else{if(nodeName==="OPTION"){if(curChild.hasAttribute("selected")){selectedIndex=i;break}i++}curChild=curChild.nextSibling;if(!curChild&&optgroup){curChild=optgroup.nextSibling;optgroup=null}}}fromEl.selectedIndex=selectedIndex}}};var ELEMENT_NODE=1;var DOCUMENT_FRAGMENT_NODE$1=11;var TEXT_NODE=3;var COMMENT_NODE=8;function noop(){}function defaultGetNodeKey(node){if(node){return node.getAttribute&&node.getAttribute("id")||node.id}}function morphdomFactory(morphAttrs){return function morphdom(fromNode,toNode,options){if(!options){options={}}if(typeof toNode==="string"){if(fromNode.nodeName==="#document"||fromNode.nodeName==="HTML"||fromNode.nodeName==="BODY"){var toNodeHtml=toNode;toNode=doc.createElement("html");toNode.innerHTML=toNodeHtml}else{toNode=toElement(toNode)}}else if(toNode.nodeType===DOCUMENT_FRAGMENT_NODE$1){toNode=toNode.firstElementChild}var getNodeKey=options.getNodeKey||defaultGetNodeKey;var onBeforeNodeAdded=options.onBeforeNodeAdded||noop;var onNodeAdded=options.onNodeAdded||noop;var onBeforeElUpdated=options.onBeforeElUpdated||noop;var onElUpdated=options.onElUpdated||noop;var onBeforeNodeDiscarded=options.onBeforeNodeDiscarded||noop;var onNodeDiscarded=options.onNodeDiscarded||noop;var onBeforeElChildrenUpdated=options.onBeforeElChildrenUpdated||noop;var skipFromChildren=options.skipFromChildren||noop;var addChild=options.addChild||function(parent,child){return parent.appendChild(child)};var childrenOnly=options.childrenOnly===true;var fromNodesLookup=Object.create(null);var keyedRemovalList=[];function addKeyedRemoval(key){keyedRemovalList.push(key)}function walkDiscardedChildNodes(node,skipKeyedNodes){if(node.nodeType===ELEMENT_NODE){var curChild=node.firstChild;while(curChild){var key=undefined;if(skipKeyedNodes&&(key=getNodeKey(curChild))){addKeyedRemoval(key)}else{onNodeDiscarded(curChild);if(curChild.firstChild){walkDiscardedChildNodes(curChild,skipKeyedNodes)}}curChild=curChild.nextSibling}}}function removeNode(node,parentNode,skipKeyedNodes){if(onBeforeNodeDiscarded(node)===false){return}if(parentNode){parentNode.removeChild(node)}onNodeDiscarded(node);walkDiscardedChildNodes(node,skipKeyedNodes)}function indexTree(node){if(node.nodeType===ELEMENT_NODE||node.nodeType===DOCUMENT_FRAGMENT_NODE$1){var curChild=node.firstChild;while(curChild){var key=getNodeKey(curChild);if(key){fromNodesLookup[key]=curChild}indexTree(curChild);curChild=curChild.nextSibling}}}indexTree(fromNode);function handleNodeAdded(el){onNodeAdded(el);var curChild=el.firstChild;while(curChild){var nextSibling=curChild.nextSibling;var key=getNodeKey(curChild);if(key){var unmatchedFromEl=fromNodesLookup[key];if(unmatchedFromEl&&compareNodeNames(curChild,unmatchedFromEl)){curChild.parentNode.replaceChild(unmatchedFromEl,curChild);morphEl(unmatchedFromEl,curChild)}else{handleNodeAdded(curChild)}}else{handleNodeAdded(curChild)}curChild=nextSibling}}function cleanupFromEl(fromEl,curFromNodeChild,curFromNodeKey){while(curFromNodeChild){var fromNextSibling=curFromNodeChild.nextSibling;if(curFromNodeKey=getNodeKey(curFromNodeChild)){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=fromNextSibling}}function morphEl(fromEl,toEl,childrenOnly){var toElKey=getNodeKey(toEl);if(toElKey){delete fromNodesLookup[toElKey]}if(!childrenOnly){var beforeUpdateResult=onBeforeElUpdated(fromEl,toEl);if(beforeUpdateResult===false){return}else if(beforeUpdateResult instanceof HTMLElement){fromEl=beforeUpdateResult;indexTree(fromEl)}morphAttrs(fromEl,toEl);onElUpdated(fromEl);if(onBeforeElChildrenUpdated(fromEl,toEl)===false){return}}if(fromEl.nodeName!=="TEXTAREA"){morphChildren(fromEl,toEl)}else{specialElHandlers.TEXTAREA(fromEl,toEl)}}function morphChildren(fromEl,toEl){var skipFrom=skipFromChildren(fromEl,toEl);var curToNodeChild=toEl.firstChild;var curFromNodeChild=fromEl.firstChild;var curToNodeKey;var curFromNodeKey;var fromNextSibling;var toNextSibling;var matchingFromEl;outer:while(curToNodeChild){toNextSibling=curToNodeChild.nextSibling;curToNodeKey=getNodeKey(curToNodeChild);while(!skipFrom&&curFromNodeChild){fromNextSibling=curFromNodeChild.nextSibling;if(curToNodeChild.isSameNode&&curToNodeChild.isSameNode(curFromNodeChild)){curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling;continue outer}curFromNodeKey=getNodeKey(curFromNodeChild);var curFromNodeType=curFromNodeChild.nodeType;var isCompatible=undefined;if(curFromNodeType===curToNodeChild.nodeType){if(curFromNodeType===ELEMENT_NODE){if(curToNodeKey){if(curToNodeKey!==curFromNodeKey){if(matchingFromEl=fromNodesLookup[curToNodeKey]){if(fromNextSibling===matchingFromEl){isCompatible=false}else{fromEl.insertBefore(matchingFromEl,curFromNodeChild);if(curFromNodeKey){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=matchingFromEl;curFromNodeKey=getNodeKey(curFromNodeChild)}}else{isCompatible=false}}}else if(curFromNodeKey){isCompatible=false}isCompatible=isCompatible!==false&&compareNodeNames(curFromNodeChild,curToNodeChild);if(isCompatible){morphEl(curFromNodeChild,curToNodeChild)}}else if(curFromNodeType===TEXT_NODE||curFromNodeType==COMMENT_NODE){isCompatible=true;if(curFromNodeChild.nodeValue!==curToNodeChild.nodeValue){curFromNodeChild.nodeValue=curToNodeChild.nodeValue}}}if(isCompatible){curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling;continue outer}if(curFromNodeKey){addKeyedRemoval(curFromNodeKey)}else{removeNode(curFromNodeChild,fromEl,true)}curFromNodeChild=fromNextSibling}if(curToNodeKey&&(matchingFromEl=fromNodesLookup[curToNodeKey])&&compareNodeNames(matchingFromEl,curToNodeChild)){if(!skipFrom){addChild(fromEl,matchingFromEl)}morphEl(matchingFromEl,curToNodeChild)}else{var onBeforeNodeAddedResult=onBeforeNodeAdded(curToNodeChild);if(onBeforeNodeAddedResult!==false){if(onBeforeNodeAddedResult){curToNodeChild=onBeforeNodeAddedResult}if(curToNodeChild.actualize){curToNodeChild=curToNodeChild.actualize(fromEl.ownerDocument||doc)}addChild(fromEl,curToNodeChild);handleNodeAdded(curToNodeChild)}}curToNodeChild=toNextSibling;curFromNodeChild=fromNextSibling}cleanupFromEl(fromEl,curFromNodeChild,curFromNodeKey);var specialElHandler=specialElHandlers[fromEl.nodeName];if(specialElHandler){specialElHandler(fromEl,toEl)}}var morphedNode=fromNode;var morphedNodeType=morphedNode.nodeType;var toNodeType=toNode.nodeType;if(!childrenOnly){if(morphedNodeType===ELEMENT_NODE){if(toNodeType===ELEMENT_NODE){if(!compareNodeNames(fromNode,toNode)){onNodeDiscarded(fromNode);morphedNode=moveChildren(fromNode,createElementNS(toNode.nodeName,toNode.namespaceURI))}}else{morphedNode=toNode}}else if(morphedNodeType===TEXT_NODE||morphedNodeType===COMMENT_NODE){if(toNodeType===morphedNodeType){if(morphedNode.nodeValue!==toNode.nodeValue){morphedNode.nodeValue=toNode.nodeValue}return morphedNode}else{morphedNode=toNode}}}if(morphedNode===toNode){onNodeDiscarded(fromNode)}else{if(toNode.isSameNode&&toNode.isSameNode(morphedNode)){return}morphEl(morphedNode,toNode,childrenOnly);if(keyedRemovalList){for(var i=0,len=keyedRemovalList.length;i<len;i++){var elToRemove=fromNodesLookup[keyedRemovalList[i]];if(elToRemove){removeNode(elToRemove,elToRemove.parentNode,false)}}}}if(!childrenOnly&&morphedNode!==fromNode&&fromNode.parentNode){if(morphedNode.actualize){morphedNode=morphedNode.actualize(fromNode.ownerDocument||doc)}fromNode.parentNode.replaceChild(morphedNode,fromNode)}return morphedNode}}var morphdom=morphdomFactory(morphAttrs);return morphdom});</script>
+<script>(function(){class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,typeof o==='function'?o(this.state):o);schedule()}forceUpdate(){schedule()}}window.DCLogic=DCLogic;})();</script>
+<script>var IMG={};
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { vue: 'graph', hover: null }; }
+  renderVals() {
+    const S = ['02-03','03-04','04-05','05-06','06-07','07-08','08-09','09-10','10-11','11-12','12-13','13-14','14-15','15-16','16-17','17-18','18-19','19-20','20-21','21-22','22-23','23-24','24-25','25-26'];
+    const N = ['', 'Régionale', 'Pré-nationale', 'Nationale 3', 'Nationale 2', 'Nationale 1', 'Élite'];
+    const NC = ['', 'Régionale', 'Pré-nat.', 'N3', 'N2', 'N1', 'Élite'];
+    const rep = (v, n) => Array(n).fill(v);
+    const T = [
+      { id: 'f1', nom: 'Féminines 1', sous: 'Équipe première', c: '#9b2c72',
+        L: [2,3,3,3,4,3,4,4,5,5,4,6,4,6,4,4,4,3,4,4,4,4,6,null],
+        K: ['Bruno Argourd','Bruno Argourd','Bruno Argourd','Bruno Argourd','Bruno Argourd','Jo Barret','Rose Beleng','Rose Beleng','Rose Beleng et Jacques Chaboissant','Rose Beleng et Alain Fossi','Rose Beleng','Alain Fossi et Jacques Chaboissant',...rep('Rose Beleng', 11),'—'] },
+      { id: 'f2', nom: 'Féminines 2', sous: 'Équipe réserve', c: '#9b2c72',
+        L: [1,2,2,2,2,2,3,3,3,3,3,3,3,2,2,3,3,2,2,2,2,2,2,null],
+        K: ['Aziz El Farkh','Jo Barret','Kevin Argourd','Kevin Argourd','Kevin Argourd','Béa Chaboissant Trésor','Béa Chaboissant Trésor','Béa Chaboissant Trésor','Béa Chaboissant Trésor et Fifi Légereau','Béa Chaboissant Trésor et Fifi Légereau','Kevin Argourd','Kevin Argourd','Kevin Argourd','Jacques Chaboissant','Jacques Chaboissant','Jacques Chaboissant et Abdel Mouhaouir','Jacques Chaboissant','Lacey Bell','Nato Tauota et Amsetou Mingorance','Amsetou Mingorance','Amsetou Mingorance','Anne-Taméra Bassong','Kévin Argourd','—'] },
+      { id: 'm1', nom: 'Masculins 1', sous: 'Équipe première', c: '#1c5fa6',
+        L: [...rep(2, 8), ...rep(3, 7), ...rep(4, 9)],
+        K: ['Aziz El Farkh', ...rep('Jo Barret', 4), 'Vincent Guérin', 'Entente EVN', 'Entente EVN', 'Jo Barret (entente EVN)', ...rep('Jo Barret', 8), ...rep('Alain Fossi', 7)] },
+      { id: 'm2', nom: 'Masculins 2', sous: 'Équipe réserve', c: '#1c5fa6',
+        L: [...rep(1, 8), 2, 1, ...rep(2, 7), 3, 3, 3, 2, 2, 2, null],
+        K: [...rep('Alain Guimard', 6), ...rep('Fifi Légereau', 7), ...rep('Kevin Argourd', 7), 'Raphaël Moizard', 'Jo Barret', 'Jo Barret', '—'] }
+    ];
+    const X0 = 110, X1 = 580, Y = (l) => 200 - (l - 1) * 36;
+    const step = (X1 - X0) / (S.length - 1);
+    const X = (i) => X0 + i * step;
+    const s = this.state;
+    const equipes = T.map(t => {
+      let d = '';
+      t.L.forEach((l, i) => { if (l == null) return; const x = X(i).toFixed(1), y = Y(l); if (!d) d = 'M' + x + ' ' + y; else { const prev = t.L[i - 1]; d += ' H' + x + ' V' + y; } });
+      const max = Math.max(...t.L.filter(v => v != null));
+      const firstMax = t.L.indexOf(max);
+      const hv = s.hover && s.hover.t === t.id ? s.hover.i : null;
+      const tipI = hv;
+      return {
+        ...t,
+        aria: t.nom + ' : niveau par saison de 2002 à 2025. Meilleur niveau : ' + N[max] + ' en ' + S[firstMax] + '.',
+        path: d,
+        points: t.L.map((l, i) => l == null ? null : { x: X(i).toFixed(1), y: Y(l), r: hv === i ? 7 : 4.5 }).filter(Boolean),
+        labels: [{ x: X(firstMax).toFixed(1), y: Y(max) - 12, t: N[max] + ' · ' + S[firstMax] }],
+        hits: S.map((_, i) => ({ x: (X(i) - step / 2).toFixed(1), w: step.toFixed(1), enter: () => this.setState({ hover: { t: t.id, i } }), leave: () => this.setState({ hover: null }) })),
+        hasTip: tipI != null && t.L[tipI] != null,
+        tip: tipI != null ? { saison: '20' + S[tipI].replace('-', ' – 20'), niveau: N[t.L[tipI]] || '', coach: t.K[tipI] } : {},
+        tipStyle: tipI != null ? 'position: absolute; top: ' + Math.max(0, (Y(t.L[tipI] || 1) / 240 * 100) - 34) + '%; left: ' + Math.min(78, Math.max(4, X(tipI) / 600 * 100 - 10)) + '%; min-width: 180px; padding: 10px 12px; background: #ffffff; border: 1px solid #5a82aa; border-radius: 10px; font-size: 13px; line-height: 18px; pointer-events: none' : 'display: none'
+      };
+    });
+    const niveaux = [1, 2, 3, 4, 5, 6].map(l => ({ y: Y(l), ty: Y(l) + 4, label: NC[l] }));
+    const ticks = [0, 4, 8, 12, 16, 20, 23].map(i => ({ x: X(i).toFixed(1), label: S[i] }));
+    const lignes = S.map((sa, i) => ({ saison: sa, cells: T.map(t => ({ n: t.L[i] == null ? 'À compléter' : N[t.L[i]], coach: t.K[i] })) })).reverse();
+    const vues = [['graph', 'Graphique'], ['table', 'Tableau']].map(([id, label]) => ({ label, selected: s.vue === id ? 'true' : 'false', pick: () => this.setState({ vue: id }), style: 'min-height: 40px; padding: 0 16px; border: 0; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; ' + (s.vue === id ? 'background: #0b1b33; color: #ffffff;' : 'background: transparent; color: #4f5f77;') }));
+    const moments = [
+      { annee: '2013', titre: 'Montée en Division Élite', detail: 'Les Féminines 1, invaincues en championnat, avec les jeunes du club.', c: '#9b2c72' },
+      { annee: '2016', titre: 'Mini-Volleyades de Laval', detail: 'La sélection des Deux-Sèvres, presque toute pexinoise, termine première.', c: '#0e6b5c' },
+      { annee: '2017', titre: '3e de France M15', detail: 'Après une série de titres régionaux.', c: '#0e6b5c' },
+      { annee: '2018', titre: 'Champions de France M15', detail: 'Le titre le plus marquant de la formation du club.', c: '#0e6b5c' },
+      { annee: '2019', titre: 'Champion d’Europe U17', detail: 'Anatole Chaboissant, formé au club, avec l’équipe de France.', c: '#1c5fa6' },
+      { annee: '[année]', titre: 'Champions de France Challenge M18', detail: 'Les garçons M18. Année à confirmer.', c: '#0e6b5c' }
+    ];
+    return { equipes, niveaux, ticks, lignes, vues, moments, vueGraph: s.vue === 'graph', vueTable: s.vue === 'table' };
+  }
+}
+
+window.Component=Component;</script>
+<script>
+(function(){
+var ancre=decodeURIComponent(location.hash.slice(1));
+var C=new Component({ancre:ancre});var tpl=document.getElementById('dc-tpl').content;var root=document.getElementById('app');var pending=false;
+window.schedule=function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;draw()})};
+function get(ctx,e){e=e.trim();if(e==='true')return true;if(e==='false')return false;if(/^-?\d+(\.\d+)?$/.test(e))return +e;return e.split('.').reduce(function(o,k){return o==null?o:o[k]},ctx)}
+function sub(s,ctx){var m=s.match(/^\s*\{\{([^}]+)\}\}\s*$/);if(m)return get(ctx,m[1]);return s.replace(/\{\{([^}]+)\}\}/g,function(_,e){var v=get(ctx,e);return v==null?'':v})}
+function bind(el,type){el.addEventListener(type,function(ev){var h=el.__h&&el.__h[type];if(h)h(ev)})}
+var SVGNS='http://www.w3.org/2000/svg';
+function proc(node,ctx,parent){
+ if(node.nodeType===3){parent.appendChild(document.createTextNode(sub(node.textContent,ctx)));return}
+ if(node.nodeType!==1)return;var tag=node.localName;
+ var sc=tag==='template'&&node.getAttribute('data-sc');var kids=sc&&node.content&&node.content.childNodes.length?node.content.childNodes:node.childNodes;
+ if(sc==='for'){var list=get(ctx,node.getAttribute('list').replace(/[{}]/g,''))||[];var as=node.getAttribute('as');list.forEach(function(it,i){var c=Object.create(ctx);c[as]=it;c.$index=i;kids.forEach(function(ch){proc(ch,c,parent)})});return}
+ if(sc==='if'){if(get(ctx,node.getAttribute('value').replace(/[{}]/g,'')))kids.forEach(function(ch){proc(ch,ctx,parent)});return}
+ if(tag==='dc-import')return;
+ var el=node.namespaceURI===SVGNS?document.createElementNS(SVGNS,tag):document.createElement(tag);
+ for(var i=0;i<node.attributes.length;i++){var a=node.attributes[i];var v=sub(a.value,ctx);
+  if(/^on/i.test(a.name)){var t=a.name.slice(2).toLowerCase();el.__h=el.__h||{};el.__h[t]=v;bind(el,t);continue}
+  if(typeof v==='function'||v===false||v==null)continue;el.setAttribute(a.name,v===true?'':v)}
+ node.childNodes.forEach(function(ch){proc(ch,ctx,el)});parent.appendChild(el)}
+function build(){var vals=C.renderVals();var frag=document.createElement('div');tpl.childNodes.forEach(function(n){proc(n,vals,frag)});return frag}
+var first=true;
+function draw(){var nx=build();
+ if(first){while(nx.firstChild)root.appendChild(nx.firstChild);first=false;return}
+ var wrap=document.createElement('div');wrap.id='app';while(nx.firstChild)wrap.appendChild(nx.firstChild);
+ morphdom(root,wrap,{onBeforeElUpdated:function(from,to){
+   if(to.__h){var had=from.__h||{};from.__h=to.__h;Object.keys(to.__h).forEach(function(t){if(!(t in had))bind(from,t)})}
+   if(from===document.activeElement&&(from.tagName==='INPUT'||from.tagName==='SELECT'))return false;
+   return true}})}
+draw();if(C.componentDidMount)C.componentDidMount();
+if(ancre&&document.getElementById(ancre))setTimeout(function(){document.getElementById(ancre).scrollIntoView()},50);
+window.addEventListener('hashchange',function(){var h=decodeURIComponent(location.hash.slice(1));if(h&&!document.getElementById(h))location.reload()});
+var toast=document.getElementById('toast');var tt;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
+ if(h==='#'){ev.preventDefault();toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},2600)}});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&C.state&&C.state.mm){C.setState({mm:null})}});
+})();
+</script>
+<script>
+(function(){
+var hd=document.getElementById('vbp-header');if(!hd)return;
+var btns=[].slice.call(hd.querySelectorAll('.mm-btn')),panel=hd.querySelector('#mega-menu'),voile=hd.querySelector('.mm-voile'),cols=[].slice.call(hd.querySelectorAll('.mm-col')),cur=null;
+var actif=hd.getAttribute('data-actif');
+function paint(){btns.forEach(function(b,i){var on=cur===i,here=b.getAttribute('data-id')===actif;b.setAttribute('aria-expanded',on?'true':'false');
+ b.style.borderBottomColor=on?'#1c5fa6':'transparent';b.style.color=(on||here)?'#1c5fa6':'#0b1b33';var sv=b.querySelector('svg');if(sv)sv.style.transform=on?'rotate(180deg)':''});
+ cols.forEach(function(c,i){c.classList.toggle('dim',cur!==null&&cur!==i);var t=c.firstElementChild;if(t)t.style.borderBottomColor=cur===i?t.getAttribute('data-c'):'#d3e1ee'});
+ panel.hidden=voile.hidden=cur===null}
+btns.forEach(function(b,i){b.addEventListener('click',function(){cur=cur===i?null:i;paint()})});
+voile.addEventListener('click',function(){cur=null;paint()});
+panel.addEventListener('click',function(e){if(e.target.closest('a'))setTimeout(function(){cur=null;paint()},0)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&cur!==null){cur=null;paint()}});
+var mb=hd.querySelector('.nav-m'),mm=hd.querySelector('#menu-mobile');
+if(mb&&mm)mb.addEventListener('click',function(){var o=mm.hidden;mm.hidden=!o;mb.setAttribute('aria-expanded',o?'true':'false');var l=mb.lastChild;if(l&&l.nodeType===3)l.textContent=o?'Fermer':'Menu'});
+paint();
+})();
+</script>
+</body>
+</html>
