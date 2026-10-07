@@ -47,6 +47,7 @@ MM_CSS = r'''
 .mm-col.dim,.mm-grid:hover .mm-col,.mm-grid:focus-within .mm-col{opacity:.36;filter:blur(1.4px) saturate(.5)}
 .mm-grid .mm-col:hover,.mm-grid .mm-col:focus-within{opacity:1 !important;filter:none !important}
 .mm-lien{transition:background-color .2s}.mm-lien:hover{background:#eaf3fa}.mm-lien:hover .mm-t{color:#1c5fa6}
+.mm-off{cursor:default;pointer-events:none}.mm-off span{color:#9aa6b6 !important}.mm-off span span{background:#c3ccd7 !important}
 @keyframes mmIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}.mm-panel{animation:mmIn .28s cubic-bezier(.2,.7,.2,1)}
 .nav-m{display:none !important}.nav-d{flex-wrap:nowrap !important;white-space:nowrap}
 @media (max-width:1360px){.nav-d{gap:20px !important;font-size:15px !important}.h-boutique{display:none !important}}
