@@ -9,3 +9,7 @@ Pages : `index.html` (accueil), `licences.html`, `calendrier.html`, `equipe.html
 - Ouvrir `index.html` dans un navigateur : aucune installation nécessaire.
 - Pour la partager : publier ce dossier tel quel (GitHub Pages, Netlify, ou un ZIP).
 - Générée depuis le canvas de design avec `scripts/build_maqueta.py`.
+
+## Présentation
+
+`presentation-fr-vbp.html` : la présentation de la proposition (en français), avec ses images et vidéos dans `presentation-media/`. Navigation au clavier (← →), au clic ou en glissant sur mobile ; la dernière diapositive renvoie vers la maquette (`index.html`).

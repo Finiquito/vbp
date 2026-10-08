@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposition web VBP Niort</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&display=swap">
+<style>
+*{margin:0;box-sizing:border-box}
+html,body{height:100%;background:#060f1e;overflow:hidden;font-family:'Open Sans',Arial,sans-serif}
+#stage{position:fixed;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0}
+#stage>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s linear .45s}
+#stage>section.on{opacity:1;visibility:visible;transition:opacity .45s ease}
+#stage>section>*{position:relative}
+#stage>section video,#stage>section img{display:block}
+h1,h2,h3{font-weight:600}
+ul{padding-left:1.2em}
+x-shape[kind=diamond]{display:block;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.cta{position:absolute!important;z-index:5;display:inline-block;padding:22px 36px;border-radius:12px;background:#ffc21a;color:#0b1b33;font:700 30px/1 'Open Sans',Arial,sans-serif;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.cta:hover{background:#ffd255}
+#bar{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 16px;color:#c9d6e6;font:600 14px/1 'Open Sans',Arial,sans-serif;opacity:.0;transition:opacity .3s}
+body:hover #bar,#bar:focus-within{opacity:1}
+#bar button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:8px;min-width:44px;height:44px;font-size:18px;cursor:pointer}
+#bar button:hover{background:rgba(255,255,255,.22)}
+#prog{position:fixed;left:0;bottom:0;height:3px;background:#ffc21a;transition:width .3s}
+#rot{display:none}
+@media (orientation:portrait) and (max-width:700px){#rot{display:block;position:fixed;top:16px;left:16px;right:16px;text-align:center;color:#c9d6e6;font:600 15px/1.4 'Open Sans',Arial,sans-serif}}
+@media (hover:none){#bar{opacity:1;background:linear-gradient(transparent,rgba(6,15,30,.8))}}
+</style>
+</head>
+<body>
+<div id="stage">
+<section id="portada" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:flex-end;gap:32px">
+<img src="presentation-media/hd-bloqueo-masculino.webp" alt="Trois joueurs du VBP Niort au contre, derrière le filet" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:linear-gradient(90deg, rgba(11,27,51,0.94) 0%, rgba(11,27,51,0.82) 42%, rgba(11,27,51,0.15) 78%, rgba(11,27,51,0) 100%)"></div>
+<img src="presentation-media/logo-vbpn.png" alt="Écusson du VBP Niort" style="position:absolute;left:128px;top:112px;width:232px;height:232px;object-fit:contain">
+<p style="font-size:28px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#ffc21a">Proposition · vbpniort.fr</p>
+<h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1.02;width:1000px">Un site à la hauteur du club</h1>
+<p style="font-size:36px;line-height:1.4;color:#c9d6e6;width:900px">Refonte et réorganisation du site du Volley-Ball Pexinois Niort</p>
+<p style="font-size:26px;color:#7cc4ec">Richard GONZALEZ · RichGT · Octobre 2026</p>
+</section>
+
+<section id="quien" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:48px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Qui suis-je</p>
+<div style="display:flex;gap:96px;align-items:flex-start">
+<div style="flex:3;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:80px;font-weight:700;line-height:1.05">Richard Gonzalez</h2>
+<p style="font-size:32px;line-height:1.4;color:#1c5fa6;font-weight:600">Graphiste et développeur web · studio RichGT</p>
+</div>
+<p style="font-size:32px;line-height:1.5;color:#4f5f77">J’aime le volley, que j’ai pratiqué pendant des années quand j’étais jeune. Cette année, mon fils Martín a pris sa licence au club, et l’accompagner à chaque entraînement m’a rapproché de ce sport.</p>
+<p style="font-size:32px;line-height:1.5;color:#4f5f77">Nous sommes arrivés en France il y a trois ans. J’apprends encore le français : c’est pour cela que cette présentation explique tout par écrit.</p>
+</div>
+<div style="flex:2;display:flex;flex-direction:column;border-top:1px solid #d3e1ee">
+<div style="display:flex;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid #d3e1ee">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6;width:240px;white-space:nowrap;min-width:max-content">20</p>
+<p style="flex:1;font-size:27px;line-height:1.35;color:#0b1b33">ans de métier, entre graphisme et développement web</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid #d3e1ee">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6;width:240px;white-space:nowrap;min-width:max-content">+100</p>
+<p style="flex:1;font-size:27px;line-height:1.35;color:#0b1b33">projets web menés à bien</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid #d3e1ee">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6;width:240px;white-space:nowrap;min-width:max-content">50</p>
+<p style="flex:1;font-size:27px;line-height:1.35;color:#0b1b33">grands clients qui m’ont fait confiance</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid #d3e1ee">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6;width:240px;white-space:nowrap;min-width:max-content">6</p>
+<p style="flex:1;font-size:27px;line-height:1.35;color:#0b1b33">pays différents : le Chili, l’Espagne, le Panama, la France…</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="porque" data-transition="fade" style="display:flex; flex-direction:column; gap:40px; justify-content:center; padding:128px; background:#0b1b33">
+  <img src="presentation-media/recepcion-masculino.jpg" alt="Joueur du VBP Niort en réception pendant un match" style="position:absolute; top:0; left:1088px; width:832px; height:1080px; object-fit:cover; object-position:20% 50%">
+  <div style="position:absolute; top:0; left:1040px; width:520px; height:1080px; background:linear-gradient(90deg, #0b1b33 0%, #0b1b33 12%, #0b1b3399 45%, #0b1b3300 100%)"></div>
+  <p style="width:900px; font-family:'Open Sans', Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#ffc21a">Pourquoi cette proposition</p>
+  <h2 style="width:900px; font-family:'Space Grotesk', Arial, sans-serif; font-size:72px; font-weight:700; line-height:1.08; color:#ffffff">Ce que j’ai vu au club ne se voit pas sur le site</h2>
+  <p style="width:880px; font-family:'Open Sans', Arial, sans-serif; font-size:32px; line-height:1.5; color:#c9d6e6">Avant de connaître le club, j’avais vu son site. Ensuite, aux entraînements, j’ai trouvé de la passion, du sérieux et de l’envie chez toutes les personnes que j’ai croisées. Rien de tout cela ne se retrouvait sur le site.</p>
+  <div style="width:880px; display:flex; align-items:center; gap:32px">
+    <svg aria-label="Personne qui présente une idée devant un tableau" viewBox="0 0 500 465.9673" style="width:132px; height:123px; flex:none"><g fill="#ffc21a"><path d="M209.93865,431.80719l-145.65845.07612c-16.0011.00836-29.57535-12.63107-30.68124-28.20462l-.32102-34.2475c2.71563-38.55545,27.32948-60.86751,65.25284-68.39385-28.20129-23.6177-30.19034-65.65078-4.07257-91.63659,5.45185-5.42431,11.86664-8.87428,18.81216-12.63965l-.06516-120.52509c-9.69138-4.43972-14.46403-13.73593-12.97195-24.01988,1.24992-8.61488,9.29761-18.13374,19.78533-18.13216l327.24263.0495c10.2651.00155,17.66529,10.05674,18.98548,18.07898,1.71345,10.41191-3.35311,19.44583-12.82054,23.94722l.0064,245.01408c12.51407,7.32537,16.78069,20.72698,10.25739,31.56739-3.20025,5.31816-9.47205,10.89667-17.26665,10.89887l-206.09084.05807-.13978,40.81713c-1.31849,14.79268-14.58358,27.28378-30.25402,27.29197ZM444.56954,60.5758c3.20147-.00014,4.6597-2.11915,4.8274-4.22306.15348-1.92551-.82608-4.93046-3.94805-4.93045l-324.51068.00094c-2.97909,0-3.86201,3.14503-3.71724,4.86377.19255,2.28607,1.61291,3.76738,4.64539,4.30256l322.70318-.01375ZM217.22418,319.96411l218.99116-.07011-.04629-242.01405-305.72876-.05123-.03648,114.63325c27.11729-2.7335,52.12579,12.4942,62.49052,36.6876,10.65817,24.87833,4.02567,53.78141-17.40627,71.66012,15.4983,3.54474,29.32996,8.63405,41.73612,19.15442ZM131.58516,297.0259c18.71456,2.20901,35.11839-7.17651,43.61433-22.27596,8.72146-15.50024,7.13392-34.3269-3.81837-48.51198-12.65983-16.39664-34.73863-21.57916-53.62083-12.44761-17.95213,8.68176-27.40343,28.11868-23.76515,47.96072,3.24967,17.72267,17.98372,32.96056,37.59001,35.27482ZM142.68176,383.00357l-3.80124-67.4684c-.08463-1.50205-3.76877-1.50709-3.84729.01532l-3.52934,68.42978,5.65237,6.15997c2.31135-2.38203,4.00735-4.1948,5.5255-7.13668ZM116.85603,324.0567c.99192-3.75447.96579-5.61216.88989-8.46366l-6.62157.91938,5.73167,7.54428ZM161.08545,316.49954c-2.21777-1.23203-3.02466-1.14418-4.62686-1.03932-.09044,2.09633-.31819,3.77701.31726,6.3732,2.20797-1.41625,3.1366-3.40397,4.3096-5.33388ZM92.02768,320.3205c-8.51578,2.96918-14.9562,5.90727-21.47342,10.40844-12.10672,8.94777-19.80284,22.54816-19.83064,37.89995l-.0603,33.29481c-.01211,6.68875,6.46794,12.74881,13.61042,12.74765l145.23756-.02364c9.0868-.00148,14.41205-8.13945,14.22554-16.25834-.27455-11.9514.4478-23.04588-1.16158-34.69033-3.2804-23.7349-20.38008-37.95565-42.64683-43.91232l-21.88093,30.56503,1.63376,34.05676c.1738,3.62291-.32547,6.3332-2.71734,9.10447l-12.09788,14.01688c-2.19089,2.53841-4.80127,4.58709-7.97033,4.57845-2.9401-.00802-5.45365-1.81777-7.48353-4.18455l-11.68109-13.61985c-2.11342-2.46419-3.64428-4.71533-3.46786-8.23949l1.73589-34.6759-23.97144-31.06803ZM444.85998,346.67126c3.67514-.0011,4.86486-3.77046,4.5076-5.62725-.43401-2.25572-2.30871-3.98617-5.62241-3.98535l-211.98823.05241,4.39402,9.62278,208.70903-.06258Z"/><path d="M295.05284,311.76369l-21.50296.2279c-8.38738.08889-15.11182-6.65936-15.13889-14.93852l-.06213-19.00259c-8.03769-3.13964-12.20694-10.7437-11.70236-19.56831.47986-8.39225-.86419-17.3542-7.21846-23.15647-30.42913-27.78574-29.87607-75.41434,1.9546-101.70454,22.49808-18.58205,54.50832-20.23203,78.73497-3.75205,16.80344,11.4304,27.20961,29.55286,29.11125,48.73227,2.08038,20.98209-5.69971,40.98203-20.7491,55.20409-6.74686,6.37596-9.48788,14.63846-8.59162,23.89435.85034,8.78164-2.98004,16.88473-11.38409,20.0695l-.14741,19.19058c-.0551,7.17253-5.48928,14.72097-13.30381,14.80379ZM291.85324,217.07843l.03334,44.79291,11.1319-.02761c-2.71858-18.53771,4.90062-32.28403,16.94285-44.39394,14.66896-14.7514,15.98322-38.60438,5.96333-56.46049-9.69431-17.27591-29.17803-27.45536-49.56494-24.58337-18.48237,2.6037-32.88365,15.14802-38.9238,31.27449-6.74672,18.01294-2.89601,38.50334,10.607,51.61088,11.65426,11.31294,17.83229,25.17916,15.58629,42.22209,4.13845.62109,7.4566.70992,11.16204.11855l-.15205-44.57025c-12.0438-5.018-18.3841-16.81152-15.73568-29.24313,2.43101-11.41108,12.86593-19.79546,25.41469-19.38845,11.64611.37773,21.63976,8.93321,23.66586,21.30259,1.83002,11.17228-4.53565,22.44547-16.13083,27.34572ZM282.3449,185.65708c-5.21773.72642-7.67732,5.25138-6.76843,9.34259.99425,4.47544,4.32822,6.65721,8.91295,6.11397,4.33935-.51416,7.3023-4.03546,6.54872-9.20455-.47977-3.29092-4.00189-6.90515-8.69325-6.25202ZM291.14843,294.93364l-.04896-16.08908-15.71623.01319.17041,16.02574,15.59477.05014Z"/><path d="M291.93706,103.59716c.02579,5.37223-3.16964,8.82865-7.47308,9.40719-4.64608.6246-9.55528-2.28384-9.60194-7.45064l-.1484-16.43374c-.04586-5.07898,3.69883-8.64748,8.06996-8.88934,5.19035-.28719,9.05781,3.44265,9.08409,8.91621l.06936,14.45032Z"/><path d="M204.1892,192.99568l-16.20746.12696c-5.13102.04019-8.77272-3.66764-8.82629-8.35361-.04951-4.33024,3.38021-8.7175,8.31501-8.72734l16.033-.03197c4.90173-.00978,8.22316,3.57445,8.56123,8.05707.30368,4.0266-2.80638,8.88918-7.87549,8.92889Z"/><path d="M378.886,193.09128l-15.35366.05926c-5.15632.0199-8.77175-3.67264-8.96299-8.38409-.18471-4.55038,3.19799-8.74584,8.31691-8.76763l15.41491-.06559c5.17992-.02204,8.77054,3.4162,9.03527,7.9826.26976,4.65321-2.84289,9.15381-8.45044,9.17546Z"/><path d="M345.55088,134.42997c-3.43844,3.44472-8.68192,2.72773-11.7644-.20758-2.68376-2.55563-4.1613-7.97231-.92629-11.17854l13.56997-13.44924c3.27214-3.24302,8.74698-1.19198,11.04114,1.74548,2.66898,3.41739,2.88002,8.2624-.38039,11.52877l-11.54003,11.56111Z"/><path d="M231.46863,120.31004c4.08246,3.82245,5.37828,8.97368,2.1096,13.19152-3.12832,4.03672-9.57132,4.36418-13.3486.20652-3.49014-3.8416-6.84853-7.5282-10.68768-11.14631-3.03511-2.86037-3.02067-7.49808-.9269-10.65142,2.2644-3.41031,6.96552-5.00101,10.82858-2.75093,4.79925,2.79537,7.85652,7.24762,12.02501,11.15061Z"/><path d="M221.16673,258.99361c-3.51175,3.53957-8.87636,2.44096-11.74425-.50531-2.95146-3.03212-3.25602-8.51691.01251-11.77976l11.71155-11.69122c3.2211-3.21551,8.69195-2.77385,11.79409.01804,2.82267,2.54038,3.67689,8.38503.63621,11.4498l-12.41011,12.50844Z"/><path d="M356.90202,246.40598c3.58043,3.57149,3.19247,8.85764.14326,12.15666-2.70014,2.92135-8.25278,3.90967-11.54803.59222l-12.61953-12.70455c-3.18051-3.20194-1.92327-8.64556.86156-11.19355,3.14774-2.88004,8.37137-3.6052,11.61726-.36742l11.54548,11.51663Z"/></g></svg>
+    <p style="flex:1; padding:0 0 0 28px; font-family:'Open Sans', Arial, sans-serif; font-size:32px; line-height:1.5; color:#ffffff; border-left:4px solid #ffc21a">Cette proposition est une initiative personnelle : personne ne me l’a demandée. Je la présente parce que je crois que le club mérite de se montrer tel qu’il est vraiment.</p>
+  </div>
+</section>
+
+<section id="objetivos" data-transition="fade" style="background:#eaf3fa;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">La proposition</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.08">Refondre et réorganiser le site autour de cinq objectifs</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:24px">
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1c5fa6;width:56px;height:56px" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15">Attirer de nouveaux licenciés</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Mieux présenter le club pour donner envie de le rejoindre.</p>
+</div>
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1c5fa6;width:56px;height:56px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15">Mieux informer</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Matchs, entraînements, événements : tout ce que fait le club, et c’est beaucoup.</p>
+</div>
+<div style="background:#1c5fa6;border:1px solid #1c5fa6;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:20px;color:#ffffff">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#ffc21a;width:56px;height:56px" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15">Montrer notre cœur</h3>
+<p style="font-size:26px;line-height:1.45;color:#eaf3fa">La formation : ce qui rend ce club unique.</p>
+</div>
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1c5fa6;width:56px;height:56px" aria-hidden="true"><path d="M7 10v12M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15">Plus beau et plus accueillant</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Clair et agréable pour chaque visiteur, aussi sur mobile.</p>
+</div>
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#1c5fa6;width:56px;height:56px" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:700;line-height:1.15">Être fiers</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Nous voir sur le site comme nous sommes déjà sur le terrain.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-hoy" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+<img src="presentation-media/patron-triangulos.jpg" alt="" style="position:absolute;left:1040px;top:0;width:880px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:1000px;top:0;width:920px;height:1080px;background:linear-gradient(90deg, #0b1b33 0%, #0b1b33 8%, rgba(11,27,51,0.55) 48%, rgba(11,27,51,0.1) 100%)"></div>
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#ffc21a;width:900px">01</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.04;width:900px">Le site aujourd’hui</h2>
+<p style="font-size:36px;line-height:1.45;color:#c9d6e6;width:860px">Avant de proposer quoi que ce soit, un regard sur vbpniort.fr tel qu’il est aujourd’hui.</p>
+</section>
+
+<section id="hoy-home" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Diagnostic · la page d’accueil actuelle</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">La première chose que voit un visiteur</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:flex-start">
+<img src="presentation-media/hoy-home-escritorio.jpg" alt="Page d’accueil actuelle de vbpniort.fr sur ordinateur : en-tête avec l’écusson, petit menu, affiche du tournoi et un long lien" style="width:515px;height:640px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<img src="presentation-media/hoy-home-celular.jpg" alt="Page d’accueil actuelle de vbpniort.fr sur mobile : l’écusson, le mot Accueil, un espace vide et l’affiche" style="width:296px;height:640px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px;padding-left:24px;border-left:4px solid #ffc21a">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Elle s’ouvre sur une affiche</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Le texte est dans l’image : il se lit mal sur mobile et n’apparaît pas dans Google.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;padding-left:24px;border-left:4px solid #ffc21a">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Un long lien affiché en clair</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">L’adresse Helloasso complète écrite en texte, au lieu d’un bouton.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;padding-left:24px;border-left:4px solid #ffc21a">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Huit menus en tout petit</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">S’inscrire ou voir le prochain match n’apparaît pas au premier coup d’œil.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;padding-left:24px;border-left:4px solid #ffc21a">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Sur mobile, un grand vide</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">L’écusson, le mot « Accueil » et un grand espace blanc avant le contenu.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="hoy-paginas" data-transition="fade" style="background:#eaf3fa;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Diagnostic · les pages</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">L’information est là, mais difficile à trouver</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:32px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<img src="presentation-media/hoy-creneaux.jpg" alt="Page Créneaux : les horaires d’entraînement publiés en image" style="width:392px;height:300px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.2">Des horaires en image</h3>
+<p style="font-size:24px;line-height:1.45;color:#4f5f77">Difficiles à lire sur mobile et impossibles à rechercher. Même chose pour les calendriers et les résultats.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<img src="presentation-media/hoy-noncl.jpg" alt="Catégorie Non classé : des actualités publiées uniquement sous forme d’affiches" style="width:392px;height:300px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.2">Des actus sans classement</h3>
+<p style="font-size:24px;line-height:1.45;color:#4f5f77">Toutes dans « Non classé », et beaucoup ne sont qu’une affiche sans texte.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<img src="presentation-media/hoy-fit.jpg" alt="Page Fit volley avec un panneau « en construction »" style="width:392px;height:300px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.2">« En construction »</h3>
+<p style="font-size:24px;line-height:1.45;color:#4f5f77">Fit volley figure dans le menu, mais la page n’a pas de contenu.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<img src="presentation-media/hoy-lupas.jpg" alt="Résultats du week-end en page d’accueil, avec une loupe noire géante sous chaque photo" style="width:392px;height:300px;object-fit:cover;border:1px solid #d3e1ee;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.2">Des loupes géantes</h3>
+<p style="font-size:24px;line-height:1.45;color:#4f5f77">En page d’accueil, une énorme loupe noire apparaît sous chaque résultat du week-end.</p>
+</div>
+</div>
+</section>
+
+<section id="hoy-resumen" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Diagnostic · en résumé</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">Six problèmes qui reviennent</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des infos en images</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Horaires, calendriers, organigramme et résultats sont publiés en PNG.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des actus sans classement</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Toutes dans « Non classé » ; beaucoup ne sont qu’une affiche sans texte.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des infos pas à jour</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Des pages de la saison 2022-23 sont encore en ligne, avec des liens vers d’anciens résultats.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des pages vides ou cassées</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Fit volley « en construction », Manifestations vide et un lien du menu qui mène à une erreur.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des éléments cassés visibles</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Des loupes géantes sous les résultats et de longs liens écrits en texte.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2">Des détails qui desservent</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Des emojis dans les titres, un écusson sans texte alternatif et une mise en page qui oublie le mobile.</p>
+</div>
+</div>
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:36px;font-weight:700;line-height:1.3;color:#1c5fa6">Le contenu existe et il est très bon. Ce qui coince, c’est la façon de le montrer.</p>
+</section>
+
+<section id="sec-marca" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+<img src="presentation-media/patron-triangulos.jpg" alt="" style="position:absolute;left:1040px;top:0;width:880px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:1000px;top:0;width:920px;height:1080px;background:linear-gradient(90deg, #0b1b33 0%, #0b1b33 8%, rgba(11,27,51,0.55) 48%, rgba(11,27,51,0.1) 100%)"></div>
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#ffc21a;width:900px">02</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.04;width:900px">L’identité du club, remise en valeur</h2>
+<p style="font-size:36px;line-height:1.45;color:#c9d6e6;width:860px">Pas de nouvelle marque : on remet en ordre celle que le club porte déjà sur son écusson.</p>
+</section>
+
+<section id="logo" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Identité · écusson</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">L’écusson, utilisé avec respect</h2>
+</div>
+<div style="display:flex;gap:32px;align-items:stretch">
+<div style="flex:1;background:#eaf3fa;border-radius:20px;display:flex;align-items:center;justify-content:center;padding:56px">
+<img src="presentation-media/logo-vbpn.png" alt="Écusson du VBP Niort sur fond clair" style="width:380px;height:380px;object-fit:contain">
+</div>
+<img src="presentation-media/escudo-panel-oscuro.jpg" alt="Écusson du VBP Niort sur la mosaïque bleue" style="width:580px;height:492px;object-fit:cover;border-radius:20px">
+<div style="width:440px;display:flex;flex-direction:column;gap:28px;justify-content:center">
+<p style="font-size:28px;line-height:1.45;color:#0b1b33"><b>Tel qu’il est :</b> on ne touche pas à l’écusson du club.</p>
+<p style="font-size:28px;line-height:1.45;color:#0b1b33"><b>Avec de l’air autour</b>, sans texte ni photo par-dessus.</p>
+<p style="font-size:28px;line-height:1.45;color:#0b1b33"><b>72 px minimum</b> à l’écran, pour que son texte reste lisible.</p>
+<p style="font-size:28px;line-height:1.45;color:#0b1b33"><b>Ni étiré, ni tourné, ni recoloré.</b></p>
+</div>
+</div>
+</section>
+
+<section id="colores" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Identité · couleurs</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">Les couleurs viennent de l’écusson</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="height:220px;background:#1c5fa6;border-radius:16px"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700">Bleu Pezenne</h3>
+<p style="font-size:24px;line-height:1.4;color:#4f5f77">#1C5FA6 · le bleu principal</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="height:220px;background:#1b4180;border-radius:16px"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700">Bleu marine</h3>
+<p style="font-size:24px;line-height:1.4;color:#4f5f77">#1B4180 · bandeaux et pied de page</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="height:220px;background:#0b1b33;border-radius:16px"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700">Bleu nuit</h3>
+<p style="font-size:24px;line-height:1.4;color:#4f5f77">#0B1B33 · textes et couvertures</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="height:220px;background:#2aa3da;border-radius:16px"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700">Bleu ciel</h3>
+<p style="font-size:24px;line-height:1.4;color:#4f5f77">#2AA3DA · accents et icônes</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="height:220px;background:#ffc21a;border-radius:16px"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:30px;font-weight:700">Ballon</h3>
+<p style="font-size:24px;line-height:1.4;color:#4f5f77">#FFC21A · le bouton principal</p>
+</div>
+</div>
+<div style="display:flex;gap:48px;align-items:flex-start;border-top:1px solid #d3e1ee;padding-top:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4f5f77">Une couleur par section</p>
+<div style="display:flex;gap:16px">
+<p style="font-size:26px;font-weight:700;color:#1c5fa6;background:#eaf3fa;padding:10px 24px;border-radius:9999px">Masculin</p>
+<p style="font-size:26px;font-weight:700;color:#9b2c72;background:#f8e8f1;padding:10px 24px;border-radius:9999px">Féminin</p>
+<p style="font-size:26px;font-weight:700;color:#0e6b5c;background:#e3f3ef;padding:10px 24px;border-radius:9999px">Jeunes</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4f5f77">Proportions</p>
+<p style="font-size:28px;line-height:1.45;color:#0b1b33">60 % blanc et glace · 30 % bleus · 10 % jaune et ciel</p>
+</div>
+</div>
+</section>
+
+<section id="tipografia" data-transition="fade" style="background:#eaf3fa;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Identité · typographie</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">Trois polices, chacune son rôle</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4f5f77">Titres</p>
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:88px;font-weight:700;line-height:1.05;color:#0b1b33">Allez Pezenne !</p>
+<div style="flex:1"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Space Grotesk</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Géométrique, moderne et pleine de caractère.</p>
+</div>
+<div style="background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4f5f77">Textes</p>
+<p style="font-size:32px;line-height:1.5;color:#0b1b33">Du baby volley à la Nationale 2, un club pour tous, de 4 à 80 ans et plus.</p>
+<div style="flex:1"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Open Sans</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Claire et agréable à lire, aussi sur mobile.</p>
+</div>
+<div style="background:#0b1b33;border:1px solid #0b1b33;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px;color:#ffffff">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7cc4ec">Scores</p>
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:120px;font-weight:800;line-height:1;color:#ffffff">3 – 1</p>
+<div style="flex:1"></div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Archivo large</h3>
+<p style="font-size:26px;line-height:1.45;color:#c9d6e6">Ses chiffres larges rappellent les lettres de l’écusson.</p>
+</div>
+</div>
+</section>
+
+<section id="formas" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Identité · formes</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:700;line-height:1.08">Trois formes tirées de l’écusson</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
+<div style="background:#eaf3fa;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:24px">
+<div style="height:240px;background:#0b1b33;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:20px">
+<x-shape kind="diamond" style="background:#ffc21a;width:110px;height:62px"></x-shape>
+<x-shape kind="diamond" style="background:#2aa3da;width:84px;height:48px"></x-shape>
+<x-shape kind="diamond" style="background:#7cc4ec;width:60px;height:34px"></x-shape>
+</div>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">Le losange couché</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Les losanges du fond de l’écusson. Ils signalent titres, catégories et rubriques.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:24px">
+<svg aria-label="Bandeau bleu au bord droit coupé en diagonale, avec une étiquette jaune au-dessus" width="458" height="240" viewBox="0 0 458 240" style="width:458px;height:240px"><rect width="458" height="240" rx="16" fill="#0b1b33"/><polygon points="0,110 380,110 342,220 0,220" fill="#1c5fa6"/><polygon points="0,70 220,70 204,110 0,110" fill="#ffc21a"/></svg>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">La diagonale</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">La coupe inclinée des triangles. Elle termine couvertures, photos et bandeaux.</p>
+</div>
+<div style="background:#eaf3fa;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:24px">
+<img src="presentation-media/patron-triangulos.jpg" alt="Mosaïque de triangles bleus de l’écusson" style="width:458px;height:240px;object-fit:cover;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:32px;font-weight:700">La mosaïque</h3>
+<p style="font-size:26px;line-height:1.45;color:#4f5f77">Les triangles bleus de l’écusson, devenus le fond du club.</p>
+</div>
+</div>
+</section>
+
+<section id="fondo" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:flex-end;gap:28px">
+<img src="presentation-media/patron-triangulos.jpg" alt="Mosaïque de triangles bleus en plein écran" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:0;top:0;width:1100px;height:1080px;background:linear-gradient(90deg, rgba(11,27,51,0.88) 0%, rgba(11,27,51,0.6) 75%, rgba(11,27,51,0) 100%)"></div>
+<p style="position:absolute;right:128px;top:128px;width:420px;font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-align:right;color:#ffffff;background:rgba(11,27,51,0.6);padding:12px 20px;border-radius:8px">Sans voile : l’original</p>
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#ffc21a">Identité · fond du club</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:96px;font-weight:700;line-height:1.05;width:900px">La mosaïque, mieux mise en valeur</h2>
+<p style="font-size:32px;line-height:1.5;color:#e2ebf5;width:860px">Aujourd’hui, la mosaïque n’apparaît que dans l’en-tête, derrière l’écusson et le menu. L’idée : l’étendre aux couvertures et aux bandeaux de rubrique, sous un voile bleu pour que les textes restent toujours lisibles.</p>
+</section>
+
+<section id="sec-web" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+<img src="presentation-media/patron-triangulos.jpg" alt="" style="position:absolute;left:1040px;top:0;width:880px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:1000px;top:0;width:920px;height:1080px;background:linear-gradient(90deg, #0b1b33 0%, #0b1b33 8%, rgba(11,27,51,0.55) 48%, rgba(11,27,51,0.1) 100%)"></div>
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#ffc21a;width:900px">03</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.04;width:900px">Le nouveau site</h2>
+<p style="font-size:36px;line-height:1.45;color:#c9d6e6;width:860px">Une maquette navigable : six pages pour saisir l’esprit du changement.</p>
+<a class="cta" href="index.html" style="left:128px;bottom:128px">Découvrir la maquette →</a>
+</section>
+
+<section id="web-home" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">1/6 · Accueil</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">Le club en un coup d’œil</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">À la une : l’actu principale, avec de vraies photos.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Les matchs du week-end : à venir et résultats.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Un volley pour chaque âge : sa catégorie et ses horaires en deux clics.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">La formation au centre : chiffres et filière du club.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Les actus et les partenaires qui nous soutiennent.</p></div>
+</div>
+<video src="presentation-media/web-home.mp4" poster="presentation-media/web-home-still.jpg" aria-label="Page d’accueil de la maquette, parcourue de haut en bas, avec le texte qui accompagne chaque arrêt" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video>
+</section>
+
+<section id="web-menu" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<video src="presentation-media/menu.mp4" poster="presentation-media/menu-still.jpg" aria-label="Menu déroulant de la maquette, rubrique par rubrique" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1344px;height:1080px;object-fit:cover"></video>
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">2/6 · Menu</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">Un menu qui met tout en ordre</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Six grandes rubriques : tout le site d’un seul regard.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">La rubrique choisie ressort, le reste s’estompe.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Les pages à venir restent en gris.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">« Se licencier » toujours visible, en jaune.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">La FFVolley et le label club formateur dans la barre.</p></div>
+</div>
+</section>
+
+<section id="web-licences" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">3/6 · Se licencier</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">S’inscrire sans se perdre</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Avec l’année de naissance, on connaît sa catégorie.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Des tarifs clairs pour chaque catégorie.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Trois étapes pour s’inscrire.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Documents et questions fréquentes au même endroit.</p></div>
+</div>
+<video src="presentation-media/web-licences.mp4" poster="presentation-media/web-licences-still.jpg" aria-label="Page Se licencier de la maquette, parcourue de haut en bas, avec le texte qui accompagne chaque arrêt" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video>
+</section>
+
+<section id="web-histoire" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">4/6 · Notre histoire</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">Une histoire bien racontée</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Une frise chronologique depuis 1963.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Des photos d’archives de chaque époque.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Le chemin parcouru, de quoi être fiers.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Les présidents qui ont fait le club.</p></div>
+</div>
+<video src="presentation-media/web-histoire.mp4" poster="presentation-media/web-histoire-still.jpg" aria-label="Page Notre histoire de la maquette, parcourue de haut en bas, avec le texte qui accompagne chaque arrêt" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video>
+</section>
+
+<section id="web-resultats" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">5/6 · Calendrier &amp; résultats</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">Toute la saison, bien rangée</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Filtres : féminin, masculin et jeunes.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Le classement juste à côté.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Tous les matchs, mois par mois.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Le score et les sets de chaque rencontre.</p></div>
+</div>
+<video src="presentation-media/web-resultats.mp4" poster="presentation-media/web-resultats-still.jpg" aria-label="Page Calendrier et résultats de la maquette, parcourue de haut en bas, avec le texte qui accompagne chaque arrêt" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video>
+</section>
+
+<section id="web-equipe" data-transition="fade" style="background:#ffffff;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<div style="position:absolute;left:1344px;top:0;width:576px;height:1080px;background:#ffffff;padding:96px 64px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px;padding:0 0 12px 76px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#1c5fa6">6/6 · Fiche équipe</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:52px;font-weight:700;line-height:1.08;width:420px">Chaque équipe a sa page</h2>
+</div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Grande photo, division et encadrement.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Joueuses et joueurs, avec leur numéro.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Saison, résultats et entraînements.</p></div>
+<div style="display:flex;align-items:center;gap:20px"><div style="width:56px;height:3px;background:#ffc21a;flex:none"></div><p style="font-size:26px;line-height:1.35;color:#0b1b33;width:436px">Les partenaires qu’on porte sur le maillot.</p></div>
+</div>
+<video src="presentation-media/web-equipe.mp4" poster="presentation-media/web-equipe-still.jpg" aria-label="Fiche de l’équipe Séniors F1 dans la maquette, parcourue de haut en bas, avec le texte qui accompagne chaque arrêt" muted loop playsinline preload="none" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video>
+</section>
+
+<section id="sec-pasos" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:32px">
+<img src="presentation-media/patron-triangulos.jpg" alt="" style="position:absolute;left:1040px;top:0;width:880px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:1000px;top:0;width:920px;height:1080px;background:linear-gradient(90deg, #0b1b33 0%, #0b1b33 8%, rgba(11,27,51,0.55) 48%, rgba(11,27,51,0.1) 100%)"></div>
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:160px;font-weight:800;line-height:1;color:#ffc21a;width:900px">04</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.04;width:900px">Et maintenant ?</h2>
+<p style="font-size:36px;line-height:1.45;color:#c9d6e6;width:860px">La décision revient au club.</p>
+</section>
+
+<section id="pasos" data-transition="fade" style="background:#eaf3fa;color:#0b1b33;font-family:'Open Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#1c5fa6">Prochaines étapes</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.08">Si cela vous intéresse, construisons-le ensemble</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;background:#1c5fa6;border:1px solid #1c5fa6;border-radius:20px;padding:44px 40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#ffc21a">01</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.15;color:#ffffff">Vous décidez</h3>
+<p style="font-size:28px;line-height:1.45;color:#eaf3fa">Si la proposition vous parle et que vous souhaitez aller plus loin.</p>
+</div>
+<div style="flex:1;background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:44px 40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6">02</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.15;color:#0b1b33">On en discute</h3>
+<p style="font-size:28px;line-height:1.45;color:#4f5f77">Comment le rendre possible : périmètre, délais et la façon de travailler qui convient le mieux au club.</p>
+</div>
+<div style="flex:1;background:#ffffff;border:1px solid #d3e1ee;border-radius:20px;padding:44px 40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#1c5fa6">03</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.15;color:#0b1b33">On s’y met</h3>
+<p style="font-size:28px;line-height:1.45;color:#4f5f77">Je développe le site par étapes, avec votre validation à chaque étape.</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.5;color:#0b1b33;padding-left:28px;border-left:4px solid #ffc21a;width:1400px">Je ne viens pas avec un devis : je souhaite d’abord savoir si vous avez envie d’avancer. Nous verrons ensuite ensemble comment faire, et je suis ouvert à toutes les possibilités.</p>
+</section>
+
+<section id="cierre" data-transition="fade" style="background:#0b1b33;color:#ffffff;font-family:'Open Sans', Arial, sans-serif;padding:128px 128px 96px;display:flex;flex-direction:column;justify-content:flex-end;gap:20px">
+<img src="presentation-media/cierre-equipo.jpg" alt="Une équipe jeunes féminine du VBP Niort avec ses encadrants, souriante, faisant le V de la victoire près du filet" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover">
+<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg, rgba(11,27,51,0) 0%, rgba(11,27,51,0) 40%, rgba(11,27,51,0.6) 58%, rgba(11,27,51,0.92) 74%, rgba(11,27,51,0.97) 100%)"></div>
+<img src="presentation-media/logo-vbpn.png" alt="Écusson du VBP Niort" style="position:absolute;left:128px;top:96px;width:150px;height:150px;object-fit:contain">
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:88px;font-weight:700;line-height:1.02">J’aimerais beaucoup le concrétiser</h2>
+<div style="display:flex;align-items:baseline;justify-content:space-between">
+<p style="font-size:44px;line-height:1.3;color:#ffc21a">La suite est entre vos mains.</p>
+<p style="font-size:26px;color:#7cc4ec">Richard GONZALEZ · RichGT</p>
+</div>
+<a class="cta" href="index.html" style="right:128px;top:120px">Découvrir la maquette →</a>
+</section>
+
+</div>
+<div id="prog"></div>
+<p id="rot">↻ Tournez votre téléphone pour mieux voir</p>
+<nav id="bar" aria-label="Navigation">
+<button id="prev" aria-label="Diapositive précédente">←</button>
+<span id="count" aria-live="polite"></span>
+<button id="next" aria-label="Diapositive suivante">→</button>
+<button id="fs" aria-label="Plein écran">⤢</button>
+</nav>
+<script>
+(function(){
+  var stage=document.getElementById('stage');
+  var S=[].slice.call(stage.children), n=S.length, cur=0;
+  function fit(){var k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform='scale('+k+') translate(-50%,-50%)';}
+  function show(i){
+    i=Math.max(0,Math.min(n-1,i));
+    S.forEach(function(s,j){
+      s.classList.toggle('on',j===i);
+      s.setAttribute('aria-hidden',j===i?'false':'true');
+      s.querySelectorAll('video').forEach(function(v){ if(j===i){try{v.currentTime=0;}catch(e){} var p=v.play(); if(p&&p.catch)p.catch(function(){});} else v.pause(); });
+    });
+    cur=i;
+    document.getElementById('count').textContent=(i+1)+' / '+n;
+    document.getElementById('prog').style.width=((i+1)/n*100)+'%';
+    if(location.hash!=='#'+(i+1)) history.replaceState(null,'','#'+(i+1));
+  }
+  function go(d){show(cur+d);}
+  addEventListener('resize',fit); fit();
+  addEventListener('keydown',function(e){
+    if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(1);}
+    else if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(-1);}
+    else if(e.key==='Home')show(0); else if(e.key==='End')show(n-1);
+    else if(e.key==='f'||e.key==='F')toggleFs();
+  });
+  document.getElementById('prev').onclick=function(){go(-1);};
+  document.getElementById('next').onclick=function(){go(1);};
+  function toggleFs(){ if(!document.fullscreenElement){ if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen(); } else document.exitFullscreen(); }
+  document.getElementById('fs').onclick=toggleFs;
+  stage.addEventListener('click',function(e){ if(e.target.closest('a'))return; go(e.clientX>innerWidth/3?1:-1); });
+  var x0=null;
+  addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(dx<0?1:-1); x0=null; },{passive:true});
+  var h=parseInt(location.hash.slice(1),10);
+  show(isNaN(h)?0:h-1);
+})();
+</script>
+</body>
+</html>
